@@ -93,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/theming/palettes.scss",
               "src/styles.scss"
             ],
             "scripts": []
