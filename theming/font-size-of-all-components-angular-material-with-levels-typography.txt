@@ -1,5 +1,4 @@
-helper functions
-
+//helper functions
 @include common.create-theme($thema-defecto) 
 @include material.core()
 

@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import{HttpClientModule} from '@angular/common/http'
+import{HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -11,13 +13,15 @@ import{HttpClientModule} from '@angular/common/http'
     CommonModule,
     MatButtonModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
  
   ],
   exports:[
     MatButtonModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
 })
 export class SharedModule { }
