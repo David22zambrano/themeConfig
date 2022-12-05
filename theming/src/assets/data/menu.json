@@ -1,0 +1,10 @@
+[
+    {
+        "nombre":"levels",
+        "redirect":"/dashboard/typographys"
+    },
+    {
+        "nombre":"card",
+        "redirect":"/dashboard/card"
+    }
+]
