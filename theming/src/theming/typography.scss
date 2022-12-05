@@ -16,10 +16,19 @@ $toolbar: mat.define-typography-level(24px, 24px, 400, $font-family: 'Roboto'!im
 
 $typography-config: map.merge(
     mat.define-typography-config(
-      $headline-5: mat.define-typography-level(96px,96px,300,$font-family:'Nunito'),
-      $headline-6: mat.define-typography-level(60px,60px,400,$font-family:'Nunito'),
-      $subtitle-1: mat.define-typography-level(48px,48px,500,$font-family:'Nunito'),
-      $subtitle-2: mat.define-typography-level(34px,34px,600,$font-family:'Nunito'),
+      $font-family:'Roboto',
+      /*this is a h1*/
+      $headline-5: mat.define-typography-level(90px, 96px, 300,$font-family:'Nunito'),
+      /*this is a h2*/
+      $headline-6: mat.define-typography-level(60px, 60px, 400,$font-family:'Nunito'),
+      /*this is a h3*/
+      $subtitle-1: mat.define-typography-level(48px, 48px, 500,$font-family:'Nunito'),
+      /*body-1 is a h4*/
+      $body-1: mat.define-typography-level(34px, 34px, 600,$font-family:'Nunito'),
+      /*body-2 is a default text*/
+      $body-2: mat.define-typography-level(16px, 16px, 400,$font-family:'Roboto'),
+
+      $subtitle-2: mat.define-typography-level(14px, 14px, 500,$font-family:'Roboto'),
     ),
     (
         "toolbar": $toolbar,
@@ -27,10 +36,22 @@ $typography-config: map.merge(
     
 );
 
-.mat-toolbar {
-  @include mat.typography-level($typography-config, "toolbar");
+
+@mixin toolbar-typography-cuztomised($config) {
+  .mat-toolbar,
+  .mat-toolbar h1,
+  .mat-toolbar h2,
+  .mat-toolbar h3,
+  .mat-toolbar h4,
+  .mat-toolbar h5,
+  .mat-toolbar h6 {
+
+    @include mat.typography-level($typography-config, "toolbar");
+
+  }
 }
 
+@include toolbar-typography-cuztomised($typography-config);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -57,8 +78,10 @@ $theming-theme: mat.define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+
 @include mat.all-component-typographies($typography-config);
 @include mat.all-component-themes($theming-theme);
+
 
 
 /* You can add global styles to this file, and also import other style files */

@@ -1,0 +1,348 @@
+helper functions
+
+@include common.create-theme($thema-defecto) 
+@include material.core()
+
+auto complete:??
+legacy-autocomplete:??
+
+
+
+badge:
+	.mat-badge-content {
+    		font-size: $font-size = 12px;
+  	}
+
+
+
+bottom-shet:
+	 .mat-bottom-sheet-container {
+    		@include typography-utils.typography-level($config, body-1);
+  	}
+
+
+
+button:??
+legacy-button:
+	.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button,.mat-flat-button, .mat-fab, .mat-mini-fab {
+    	font: {
+      		size: typography-utils.font-size($config, button);
+    	}
+  	}
+
+
+
+button-toggle:??
+
+
+
+card:
+	//card-title
+		.mat-mdc-card-title {
+      		@include mdc-typography.typography(headline6);
+    		}
+	//card subtitle
+		 .mat-mdc-card-subtitle {
+     			 @include mdc-typography.typography(subtitle2);
+    		}
+	//card content
+	 	  .mat-card-content {
+   			 font-size: typography-utils.font-size($config, body-1);
+  		}
+legacy-card:
+	 .mat-mdc-card-title :headline6
+	 .mat-mdc-card-subtitle :subtitle2
+	 .mat-card-subtitle,.mat-card-content:body-1
+
+
+
+checkbox:??
+legacy-chebox:??
+
+
+
+chips:
+	.mat-mdc-standard-chip {
+      	@include mdc-typography.typography(body2, $query: mdc-helpers.$mdc-typography-styles-query);
+    	}
+legacy-chip: 
+	.mat-chip {
+    		font-size: typography-utils.font-size($config, body-2);
+    		font-weight: typography-utils.font-weight($config, body-2);
+    	.mat-chip-trailing-icon.mat-icon,.mat-chip-remove.mat-icon {
+      	font-size: $chip-remove-font-size = 18px;
+    		}
+ 	 }
+
+
+
+datepicker:
+	//calendar body
+		 .mat-calendar-body {
+   			 font-size: $calendar-body-font-size = 13px;
+  		}
+	//label and buttons
+		.mat-calendar-body-label,.mat-calendar-period-button {
+    			font: {
+      			size: typography-utils.font-size($config, button);
+    			}
+  		}
+	//th of table calendae
+		.mat-calendar-table-header th {
+   			 font: {
+      			size: $calendar-weekday-table-font-size = 11px;
+    			}
+  		}
+
+
+
+
+dialog:
+	@include mdc-dialog-theme.theme((
+        subhead-font: map.get($headline6, font-family),
+        subhead-size: map.get($styles, headline6, font-size),
+
+        supporting-text-font: map.get($styles, body1, font-family),
+        supporting-text-size: map.get($styles, body1, font-size),
+      ));
+legacy-dialog:
+	.mat-dialog-title {
+   		 @include typography-utils.typography-level($config, title);
+  	}
+
+
+
+divider:??
+
+
+
+grid-list:
+	.mat-grid-tile-header,.mat-grid-tile-footer:caption,body-1
+
+
+
+icon:??
+
+
+
+input:??
+legacy-input:??
+
+
+
+
+legacy-form-field:
+	 .mat-grid-tile-header,.mat-grid-tile-footer {
+    		@include list-common.base(typography-utils.font-size($config, caption));
+    		font-size: typography-utils.font-size($config, body-1);
+  	}
+
+
+
+
+list:
+	.mat-mdc-list-item .mdc-list-item__primary-text {
+    		@include typography-utils.typography-level($config, body-1);
+  	}
+legacy-list:
+	// Default list
+		.mat-list-item {
+     			 font-size: typography-utils.font-size($config, caption);
+      		@include list-common.base(typography-utils.font-size($config, caption));
+    		}
+		.mat-list-option {
+     			 font-size: typography-utils.font-size($config, subheading-2);
+      		@include list-common.base(typography-utils.font-size($config, body-1));
+    		}
+		.mat-subheader {
+      		font-size: typography-utils.font-size($config, body-2);
+    		}
+	// Dense list
+		 .mat-list-item {
+      		font-size: typography-utils.font-size($config, caption);
+      		@include list-common.base(typography-utils.font-size($config, caption));
+    		}
+		 .mat-list-option {
+     			 font-size: typography-utils.font-size($config, caption);
+      		@include list-common.base(typography-utils.font-size($config, caption));
+    		}
+		.mat-subheader {
+      		font-size: typography-utils.font-size($config, caption);
+    		}
+		
+
+menu:
+	.mat-mdc-menu-item .mdc-list-item__primary-text {
+		 @include mdc-typography.typography(body1, $query: mdc-helpers.$mdc-typography-styles-query);
+	}
+legacy-menu:
+	 .mat-menu-item {
+    		font: {
+      		family: typography-utils.font-family($config, body-1);
+      		size: typography-utils.font-size($config, body-1);
+      		weight: typography-utils.font-weight($config, body-1);
+    		}
+	}
+
+
+
+
+paginator:
+	.mat-mdc-paginator {
+      	@include mdc-typography.typography(caption, $query: mdc-helpers.$mdc-typography-styles-query);
+   	}
+	.mat-mdc-paginator .mat-mdc-select-value {
+      	font-size: typography-utils.font-size($config, caption);
+    	}
+legacy-paginator:
+	 .mat-paginator,.mat-paginator-page-size .mat-select-trigger {
+		font: {
+      		size: typography-utils.font-size($config, caption);
+    		}
+  	}
+
+
+
+
+legacy-progres-bar:no apply
+
+
+
+
+legacy-progres-spiner-no apply
+
+
+
+legacy-radio:no apply
+
+
+
+
+select:
+	.mat-mdc-select {
+      	@include mdc-typography.typography(body1, $query: mdc-helpers.$mdc-typography-styles-query);
+    	}
+legacy-select:?? or no apply
+
+
+
+legacy-slide-toggle:?? or no apply
+
+
+
+legacy-slider:
+	.mat-slider-thumb-label-text {
+    		font: {
+			 size: typography-utils.font-size($config, caption);
+		}
+
+
+
+legacy-snack-bar:
+	.mat-simple-snackbar {
+		font:{
+			size: typography-utils.font-size($config, body-1);
+		}
+	}
+
+
+
+legacy-table:
+	//header cell
+		.mat-header-cell{
+		 	font-size: typography-utils.font-size($config, caption);
+		}
+	//cell footer
+		 .mat-cell, .mat-footer-cell {
+   			 font-size: typography-utils.font-size($config, body-1);
+  		}
+
+
+
+legacy-tabs:
+	 .mat-tab-label, .mat-tab-link {
+		font:{
+			size: typography-utils.font-size($config, button);
+		}	
+	}
+
+
+
+legacy-tooltip:
+	.mat-tooltip {
+		font-size:10px
+	}
+	 .mat-tooltip-handset{
+		font-size:14px
+	}
+
+
+
+sidenav:?? or no apply
+
+
+
+slider:
+	.mat-mdc-slider {
+		@include mdc-slider-theme.theme((
+			label-label-text-font-size: mdc-typography.get-size(subtitle2),
+		))
+	}
+
+
+
+snack-bar:
+	@include mdc-helpers.using-mdc-typography($config) {
+    		@if ($config) {
+      		.mat-mdc-snack-bar-container {
+        			@include mdc-snackbar-theme.theme((
+          				supporting-text-size: typography-utils.font-size($config, body-2),
+        			));
+      		}
+    		}
+  	}
+
+
+
+sort:no apply
+
+
+
+toolbar:
+	.mat-toolbar,.mat-toolbar h1,.mat-toolbar h2,.mat-toolbar h3,.mat-toolbar h4,.mat-toolbar h5,.mat-toolbar h6 {
+    		@include typography-utils.typography-level($config, title-headline-6);
+    		margin: 0;
+  	}
+
+
+
+tooltip:
+	.mat-mdc-tooltip {
+      	@include plain-tooltip-theme.theme((
+        		supporting-text-size: mdc-typography.get-size(caption),
+      	));
+    	}
+
+
+
+tree:
+	.mat-tree-node,.mat-nested-tree-node {
+    		font-size: typography-utils.font-size($config, body-1);
+  	}
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
