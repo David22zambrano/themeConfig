@@ -6,5 +6,13 @@
     {
         "nombre":"card",
         "redirect":"/dashboard/card"
+    },
+    {
+        "nombre":"dialog",
+        "redirect":"/dashboard/dialog"
+    },
+    {
+        "nombre":"table",
+        "redirect":"/dashboard/table"
     }
 ]

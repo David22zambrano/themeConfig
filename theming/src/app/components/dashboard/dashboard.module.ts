@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard.component';
 import { TypographyLevelsComponent } from './typography-levels/typography-levels.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CardComponent } from './card/card.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { TableComponent } from './table/table.component';
+import { DialogBoxComponent } from './dialog/dialog-box/dialog-box.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { CardComponent } from './card/card.component';
     DashboardComponent,
     TypographyLevelsComponent,
     NavBarComponent,
-    CardComponent
+    CardComponent,
+    DialogComponent,
+    TableComponent,
+    DialogBoxComponent
   ],
   imports: [
     CommonModule,

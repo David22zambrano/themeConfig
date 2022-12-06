@@ -38,19 +38,19 @@ button-toggle:??
 card:
 	//card-title
 		.mat-mdc-card-title {
-      		@include mdc-typography.typography(headline6);
+      		@include mdc-typography.typography(headline-6);
     		}
 	//card subtitle
 		 .mat-mdc-card-subtitle {
-     			 @include mdc-typography.typography(subtitle2);
+     			 @include mdc-typography.typography(subtitle-2);
     		}
 	//card content
 	 	  .mat-card-content {
    			 font-size: typography-utils.font-size($config, body-1);
   		}
 legacy-card:
-	 .mat-mdc-card-title :headline6
-	 .mat-mdc-card-subtitle :subtitle2
+	 .mat-mdc-card-title :headline-6
+	 .mat-mdc-card-subtitle :subtitle-2
 	 .mat-card-subtitle,.mat-card-content:body-1
 
 
@@ -98,8 +98,8 @@ datepicker:
 
 dialog:
 	@include mdc-dialog-theme.theme((
-        subhead-font: map.get($headline6, font-family),
-        subhead-size: map.get($styles, headline6, font-size),
+        subhead-font: map.get($headline-6, font-family),
+        subhead-size: map.get($styles, headline-6, font-size),
 
         supporting-text-font: map.get($styles, body1, font-family),
         supporting-text-size: map.get($styles, body1, font-size),
@@ -219,7 +219,7 @@ legacy-radio:no apply
 
 select:
 	.mat-mdc-select {
-      	@include mdc-typography.typography(body1, $query: mdc-helpers.$mdc-typography-styles-query);
+      	@include mdc-typography.typography(body-1, $query: mdc-helpers.$mdc-typography-styles-query);
     	}
 legacy-select:?? or no apply
 
