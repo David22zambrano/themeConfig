@@ -29,7 +29,8 @@ $typography-global-config: mat.define-typography-config(
       $line-height: 1.75,
       $letter-spacing: 0.00938em,
     ),
-  /*subtitle-1 is a h4*/ $subtitle-2:
+    
+  /*subtitle-2 is a h4*/ $subtitle-2:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 500,
@@ -37,21 +38,22 @@ $typography-global-config: mat.define-typography-config(
       $line-height: 1.57,
       $letter-spacing: 0.00714em,
     ),
+
   $body-1:
-    mat.define-typography-level(
-      $font-family: Roboto,
-      $font-weight: 400,
-      $font-size: 1rem,
-      $line-height: 1.5,
-      $letter-spacing: 0.00938em,
-    ),
-  $body-2:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 400,
       $font-size: 0.875rem,
       $line-height: 1.5,
       $letter-spacing: 0.001071em,
+    ),
+  $body-2:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 400,
+      $font-size: 1rem,
+      $line-height: 1.5,
+      $letter-spacing: 0.00938em,
     ),
   $caption:
     mat.define-typography-level(
@@ -71,7 +73,17 @@ $typography-global-config: mat.define-typography-config(
     ),
 );
 
+@include mat.all-component-typographies($typography-global-config);
 
+// .mat-toolbar{
+//   @include mat.typography-level($typography-global-config, 'subtitle-2');
+// }
+// .mat-mdc-card-title {
+//   @include mat.typography-level($typography-global-config, 'subtitle-2');
+// }
+// .mat-dialog-title {
+//   @include mat.typography-level($typography-global-config, 'subtitle-2');
+// }
 
 html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 14px; }
