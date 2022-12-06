@@ -73,7 +73,7 @@ $typography-global-config: mat.define-typography-config(
     ),
 );
 
-@include mat.all-component-typographies($typography-global-config);
+
 
 // .mat-toolbar{
 //   @include mat.typography-level($typography-global-config, 'subtitle-2');
