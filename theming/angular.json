@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/theming/typography.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/theming/palettes.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "f15c2520-bc7e-4094-bb98-926a49ebc2dd"
+    "analytics": "99eb843a-287c-4492-b68e-ae4cee386498"
   }
 }
