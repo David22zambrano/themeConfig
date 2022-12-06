@@ -3,6 +3,7 @@
 @use "@angular/material" as mat;
 @use "sass:map";
 @use "./palettes.scss";
+@import 'src/theming/typography.scss';
 
 $primary: (
   50: #e4ecf4,
@@ -242,8 +243,7 @@ $light-theme: mat.define-light-theme(
       accent: $accent-color,
       warn: $warn-color,
     ),
-    typography: $my-custom-typography,
-    density: 0,
+
   )
 );
 
@@ -284,7 +284,6 @@ $light-theme: map.deep-merge(
 // info: $info-color,
 // warning: $warning-color,
 
-.light-theme {
-  background-color: $light-background-default;
+
   @include mat.all-component-themes($light-theme);
-}
+@include mat.all-component-typographies($typography-global-config);

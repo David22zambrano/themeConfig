@@ -3,77 +3,75 @@
 
 @use 'sass:map';
 
-
-$toolbar: mat.define-typography-level(24px, normal, 400, $font-family: 'Roboto'!important);
-
-$typography-global-config: map.merge(
-    mat.define-typography-config(
-      $font-family:'Roboto',
-      /*this is a h1*/
-      $headline-5: mat.define-typography-level(90px, normal, 300,$font-family:'Nunito'),
-      /*this is a h2*/
-      $headline-6: mat.define-typography-level(60px, normal, 400,$font-family:'Nunito'),
-      /*this is a h3*/
-      $subtitle-1: mat.define-typography-level(48px, normal, 500,$font-family:'Nunito'),
-      /*body-1 is a h4*/
-      $body-1: mat.define-typography-level(34px, normal, 600,$font-family:'Nunito'),
-      /*body-2 is a default text*/
-      $body-2: mat.define-typography-level(16px, normal, 400,$font-family:'Roboto'),
-
-      $subtitle-2: mat.define-typography-level(14px, normal, 500,$font-family:'Roboto'),
-      
-      $caption: mat.define-typography-level(14px,normal,500,$font-family:'Roboto')
+$typography-global-config: mat.define-typography-config(
+  $font-family: "Roboto",
+  /*this is a h1*/ $headline-5:
+    mat.define-typography-level(
+      $font-family: Nunito,
+      $font-weight: 300,
+      $font-size: 6rem,
+      $line-height: 1.1167,
+      $letter-spacing: -0.01562em,
     ),
-    (
-        "toolbar": $toolbar,
+  /*healdine-6 is a h2*/ $headline-6:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 300,
+      $font-size: 3.75rem,
+      $line-height: 1.2,
+      $letter-spacing: -0.008833em,
     ),
-    
+  /*subtitle-1 is a h3*/ $subtitle-1:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 400,
+      $font-size: 1rem,
+      $line-height: 1.75,
+      $letter-spacing: 0.00938em,
+    ),
+  /*subtitle-1 is a h4*/ $subtitle-2:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 500,
+      $font-size: 0.875rem,
+      $line-height: 1.57,
+      $letter-spacing: 0.00714em,
+    ),
+  $body-1:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 400,
+      $font-size: 1rem,
+      $line-height: 1.5,
+      $letter-spacing: 0.00938em,
+    ),
+  $body-2:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 400,
+      $font-size: 0.875rem,
+      $line-height: 1.5,
+      $letter-spacing: 0.001071em,
+    ),
+  $caption:
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 400,
+      $font-size: 0.75rem,
+      $line-height: 1.66,
+      $letter-spacing: 0.03333em,
+    ),
+   $button:  
+    mat.define-typography-level(
+      $font-family: Roboto,
+      $font-weight: 500,
+      $font-size: 0.875rem,
+      $line-height: 1.75,
+      $letter-spacing: 0.02857em,
+    ),
 );
 
 
-@mixin toolbar-typography-cuztomised($config) {
-  .mat-toolbar,
-  .mat-toolbar h1,
-  .mat-toolbar h2,
-  .mat-toolbar h3,
-  .mat-toolbar h4,
-  .mat-toolbar h5,
-  .mat-toolbar h6 {
 
-    @include mat.typography-level($config, "toolbar");
-  }
-}
-@include toolbar-typography-cuztomised($typography-global-config);
-
-
-
-$my-app-primary: mat.define-palette(mat.$indigo-palette);
-$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$my-app-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-
-$my-app-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $my-app-primary,
-      accent: $my-app-accent,
-      warn: $my-app-warn,
-    ),
-    typography:$typography-global-config,
-    density: 0,
-  )
-);
-
-
-@include mat.all-component-typographies($typography-global-config);
-@include mat.all-component-themes($my-app-theme);
-// @include mat.core-theme($my-app-theme);
-
-
-
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 14px; }

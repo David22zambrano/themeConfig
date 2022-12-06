@@ -12,7 +12,9 @@ export class DialogComponent {
   constructor(public dialog: MatDialog){}
     
   openDialog(){
-    this.dialog.open(DialogBoxComponent);
+    this.dialog.open(DialogBoxComponent,{
+      width:'900px'
+    });
 
   }
 }
