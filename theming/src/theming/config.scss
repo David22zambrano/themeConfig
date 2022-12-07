@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+
+/// @param {Map} $primary The primary color map.
+/// @param {Map} $accent The accent color map.
+/// @param {Map} $warn The warn color map.
+/// @param {Map} $success The success color map.
+/// @param {Map} $danger The danger color map.
+
+@function fs-light-theme(
+  $primary: mat.define-palette(mat.$pink-palette, 200),
+  $accent: mat.define-palette(mat.$pink-palette, A100),
+  $warn: mat.define-palette(mat.$pink-palette),
+  $success: mat.define-palette(mat.$indigo-palette),
+  $danger: mat.define-palette(mat.$red-palette)
+) {
+  $light-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $primary,
+        accent: $accent,
+        warn: $warn,
+      ),
+    )
+  );
+  $danger-success: (
+    success: $success,
+    danger: $danger,
+  );
+  @return map.deep-merge($light-theme, $danger-success);
+}
+
+ .light-theme{
+
+     &.mat-button.mat-success
+     &.mat-raised-button.mat-success {
+       color: #000;
+       background-color: #16b53642;
+       
+     }
+ }
+
+

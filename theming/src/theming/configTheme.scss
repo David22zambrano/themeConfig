@@ -2,206 +2,7 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 @use "sass:map";
-@use "./palettes.scss";
-
-$primary: (
-  50: #e4ecf4,
-  100: #bcd0e3,
-  200: #8fb1d0,
-  300: #6291bd,
-  400: #407aaf,
-  500: #1e62a1,
-  600: #1a5a99,
-  700: #16508f,
-  800: #124685,
-  900: #0a3474,
-  A100: #a5c4ff,
-  A200: #72a3ff,
-  A400: #3f82ff,
-  A700: #2571ff,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #ffffff,
-    500: #ffffff,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #ffffff,
-    A700: #ffffff,
-  ),
-);
-$accent: (
-  50: #e2f7fc,
-  100: #b6ebf6,
-  200: #86ddf1,
-  300: #55cfeb,
-  400: #30c5e6,
-  500: #0cbbe2,
-  600: #0ab5df,
-  700: #08acda,
-  800: #06a4d6,
-  900: #0396cf,
-  A100: #f6fcff,
-  A200: #c3ecff,
-  A400: #90dcff,
-  A700: #77d4ff,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
-$warn: (
-  50: #f9e8e8,
-  100: #f1c7c7,
-  200: #e8a1a1,
-  300: #df7b7b,
-  400: #d85f5f,
-  500: #d14343,
-  600: #cc3d3d,
-  700: #c63434,
-  800: #c02c2c,
-  900: #b51e1e,
-  A100: #ffecec,
-  A200: #ffb9b9,
-  A400: #ff8686,
-  A700: #ff6d6d,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #ffffff,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
-$success: (
-  50: #f2f9e7,
-  100: #ddefc4,
-  200: #c7e49d,
-  300: #b1d975,
-  400: #a0d158,
-  500: #8fc93a,
-  600: #87c334,
-  700: #7cbc2c,
-  800: #72b525,
-  900: #60a918,
-  A100: #edffde,
-  A200: #d2ffab,
-  A400: #b6ff78,
-  A700: #a9ff5e,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #000000,
-    900: #000000,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
-$warning: (
-  50: #fff0e0,
-  100: #fedab3,
-  200: #fdc280,
-  300: #fcaa4d,
-  400: #fc9726,
-  500: #fb8500,
-  600: #fa7d00,
-  700: #fa7200,
-  800: #f96800,
-  900: #f85500,
-  A100: #ffffff,
-  A200: #fff1eb,
-  A400: #ffccb8,
-  A700: #ffba9f,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #000000,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
-$info: (
-  50: #e6f3f8,
-  100: #c0e2ee,
-  200: #96cfe2,
-  300: #6cbcd6,
-  400: #4dadce,
-  500: #2d9fc5,
-  600: #2897bf,
-  700: #228db8,
-  800: #1c83b0,
-  900: #1172a3,
-  A100: #d4efff,
-  A200: #a1dcff,
-  A400: #6ecaff,
-  A700: #54c1ff,
-  contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
-);
-
-$light-background-default: #f1f0ee;
+@import "./palettes";
 
 $other: (
   divider: rgba(16, 24, 64, 0.12),
@@ -218,12 +19,34 @@ $background: (
   default: #f1f0ee,
 );
 
-$my-custom-typography: mat.define-typography-config(
-  $font-family: "Roboto",
+$toolbar: mat.define-typography-level(
+  24px,
+  24px,
+  400,
+  $font-family: "Roboto" !important
+);
+$typography-config: map.merge(
+  mat.define-typography-config(
+    $headline-5:
+      mat.define-typography-level(96px, 96px, 300, $font-family: "Nunito"),
+    $headline-6:
+      mat.define-typography-level(60px, 60px, 400, $font-family: "Nunito"),
+    $subtitle-1:
+      mat.define-typography-level(48px, 48px, 500, $font-family: "Nunito"),
+    $subtitle-2:
+      mat.define-typography-level(34px, 34px, 600, $font-family: "Nunito"),
+  ),
+  (
+    "toolbar": $toolbar,
+  )
 );
 
-@include mat.core();
+.mat-toolbar {
+  @include mat.typography-level($typography-config, "toolbar");
+}
 
+@include mat.core();
+//LIGHT MODE COLORS
 $primary-color: mat.define-palette($primary);
 $accent-color: mat.define-palette($accent);
 $warn-color: mat.define-palette($warn);
@@ -231,10 +54,15 @@ $success-color: mat.define-palette($success);
 $warning-color: mat.define-palette($warning);
 $info-color: mat.define-palette($info);
 
-// ---------------------------------------------------------
+//DARK MODE COLOR
+$dark-primary-color: mat.define-palette($dark-primary);
+$dark-accent-color: mat.define-palette($dark-accent);
+$dark-warn-color: mat.define-palette($dark-warn);
+$dark-success-color: mat.define-palette($dark-success);
+$dark-info-color: mat.define-palette($dark-info);
+$dark-warning-color: mat.define-palette($dark-warning);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+// DEFINITION THEME
 $light-theme: mat.define-light-theme(
   (
     color: (
@@ -242,49 +70,302 @@ $light-theme: mat.define-light-theme(
       accent: $accent-color,
       warn: $warn-color,
     ),
-    typography: $my-custom-typography,
+    typography: $typography-config,
     density: 0,
   )
 );
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-
 $light-theme: map.deep-merge(
   $light-theme,
   (
     success: $success-color,
+    warning: $warning-color,
     info: $info-color,
-
     color: (
       success: $success-color,
+      warning: $warning-color,
       info: $info-color,
     ),
   )
 );
-@mixin color-button ($theme){
-  $theme-colors: mat.mat-get-color-config($theme);
-  $success-color-palette: map-get($theme-colors, success);
-  $info-color-palette: map-get($theme-colors, info);
-  $warning-color-palette: map-get($theme-colors, warning);
-  $backgrounds: map-get($theme-colors, background);
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $dark-primary-color,
+      accent: $dark-accent-color,
+      warn: $dark-warn-color,
+    ),
+    typography: $typography-config,
+    density: 0,
+  )
+);
 
-  mat-button{
-    background-color: mat.mat-color($backgrounds, lighter);
-    & .mat-button-success{
-      background-color: mat.mat-color($success-color-palette, lighter);
-    }
-  }
-
-
-}
-// @include mat.core-theme($my-theme);
-// success: $success-color,
-// info: $info-color,
-// warning: $warning-color,
-
+$dark-theme: map.deep-merge(
+  $dark-theme,
+  (
+    success: $dark-success-color,
+    warning: $dark-warning-color,
+    info: $dark-info-color,
+    color: (
+      success: $dark-success-color,
+      warning: $dark-warning-color,
+      info: $dark-info-color,
+    ),
+  )
+);
+// @debug $light-theme;
+// LIGHT THEME
+$light-background-default: #f1f0ee;
 .light-theme {
   background-color: $light-background-default;
   @include mat.all-component-themes($light-theme);
 }
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+}
+// ADDING EXTRA COLORS / SUCCESS / WARNING / INFO
+
+$success-main-color: mat.get-color-from-palette($dark-success, 500);
+$info-main-color: mat.get-color-from-palette($dark-info, 500);
+$warning-main-color: mat.get-color-from-palette($dark-warning, 500);
+
+$light-contrast-text: #fff;
+
+// EXTRA COLORS CONFIGURATION
+@mixin success-config-color {
+  background-color: $success-main-color;
+  color: $light-contrast-text;
+}
+@mixin info-config-color {
+  background-color: $info-main-color;
+  color: $light-contrast-text;
+}
+@mixin warning-config-color {
+  background-color: $warning-main-color;
+  color: $light-contrast-text;
+}
+// MAT TOOLBAR EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-toolbar.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-toolbar.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-toolbar.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-toolbar.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-toolbar.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-toolbar.mat-warning {
+  @include warning-config-color;
+}
+// BASIC BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+.light-theme .mat-mdc-button.mat-success {
+  color: $success-main-color;
+}
+.dark-theme .mat-mdc-button.mat-success {
+  color: $success-main-color;
+}
+.light-theme .mat-mdc-button.mat-info {
+  color: $info-main-color;
+}
+.dark-theme .mat-mdc-button.mat-info {
+  color: $info-main-color;
+}
+.light-theme .mat-mdc-button.mat-warning {
+  color: $warning-main-color;
+}
+.dark-theme .mat-mdc-button.mat-warning {
+  color: $warning-main-color;
+}
+// MAT RAISED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
+  @include warning-config-color;
+}
+
+// MAT STROKED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-outlined-button.mat-success {
+  color: $success-main-color;
+}
+.dark-theme .mat-mdc-outlined-button.mat-success {
+  color: $success-main-color;
+}
+.light-theme .mat-mdc-outlined-button.mat-info {
+  color: $info-main-color;
+}
+.dark-theme .mat-mdc-outlined-button.mat-info {
+  color: $info-main-color;
+}
+.light-theme .mat-mdc-outlined-button.mat-warning {
+  color: $warning-main-color;
+}
+.dark-theme .mat-mdc-outlined-button.mat-warning {
+  color: $warning-main-color;
+}
+
+// FLAT BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
+  @include warning-config-color;
+}
+
+// ICON BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-icon-button.mat-success {
+  color: $success-main-color;
+}
+.dark-theme .mat-mdc-icon-button.mat-success {
+  color: $success-main-color;
+}
+.light-theme .mat-mdc-icon-button.mat-info {
+  color: $info-main-color;
+}
+.dark-theme .mat-mdc-icon-button.mat-info {
+  color: $info-main-color;
+}
+.light-theme .mat-mdc-icon-button.mat-warning {
+  color: $warning-main-color;
+}
+.dark-theme .mat-mdc-icon-button.mat-warning {
+  color: $warning-main-color;
+}
+
+// ICON EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-icon.mat-success {
+  color: $success-main-color;
+}
+.dark-theme .mat-icon.mat-success {
+  color: $success-main-color;
+}
+.light-theme .mat-icon.mat-info {
+  color: $info-main-color;
+}
+.dark-theme .mat-icon.mat-info {
+  color: $info-main-color;
+}
+.light-theme .mat-icon.mat-warning {
+  color: $warning-main-color;
+}
+.dark-theme .mat-icon.mat-warning {
+  color: $warning-main-color;
+}
+// MAT FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-fab.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-mdc-fab.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-mdc-fab.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-mdc-fab.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-mdc-fab.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-mdc-fab.mat-warning {
+  @include warning-config-color;
+}
+// MAT MINI FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-mini-fab.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-mdc-mini-fab.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-mdc-mini-fab.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-mdc-mini-fab.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-mdc-mini-fab.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-mdc-mini-fab.mat-warning {
+  @include warning-config-color;
+}
+// MAT BADGE EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-badge.mat-badge.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-badge.mat-badge.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-badge.mat-badge.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-badge.mat-badge.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-badge.mat-badge.mat-warning {
+  @include info-config-color;
+}
+.dark-theme .mat-badge.mat-badge.mat-warning {
+  @include info-config-color;
+}
+
+// MAT CHECKBOX / MAT RADIO BUTTONS --THESE ONLY CAN BE CHANGED  TO 'PRIMARY' OR 'WARN' COLOR. https://material.angular.io/components/checkbox/overview
+
+// MAT CHIPS EXTRA COLORS / DARK AND LIGHT MODE
+.light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
+  @include success-config-color;
+}
+.dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
+  @include success-config-color;
+}
+.light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-info {
+  @include info-config-color;
+}
+.dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-info {
+  @include info-config-color;
+}
+.light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-warning {
+  @include warning-config-color;
+}
+.dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-warning {
+  @include warning-config-color;
+}
+// MAT AUTOCOMPLETE
