@@ -1,12 +1,11 @@
-@use "@angular/material" as mat;
 
-@use "sass:map";
+@use '@angular/material' as mat;
+
+@use 'sass:map';
 
 $typography-global-config: mat.define-typography-config(
   $font-family: "Roboto",
-  /*this is a h1*/ $headline-5:
-    mat.define-typography-level(
-      $font-family: Nunito,
+  /*this is a h1*/ $headline-5: mat.define-typography-level($font-family: Nunito,
       $font-weight: 300,
       $font-size: 6rem,
       $line-height: 1.1167,
@@ -27,8 +26,8 @@ $typography-global-config: mat.define-typography-config(
       $font-size: 1rem,
       $line-height: 1.75,
       $letter-spacing: 0.00938em,
-
     ),
+    
   /*subtitle-2 is a h4*/ $subtitle-2:
     mat.define-typography-level(
       $font-family: Roboto,
@@ -37,6 +36,7 @@ $typography-global-config: mat.define-typography-config(
       $line-height: 1.57,
       $letter-spacing: 0.00714em,
     ),
+
   $body-1:
     mat.define-typography-level(
       $font-family: Roboto,
@@ -61,7 +61,7 @@ $typography-global-config: mat.define-typography-config(
       $line-height: 1.66,
       $letter-spacing: 0.03333em,
     ),
-  $button:
+   $button:  
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 500,
@@ -71,12 +71,9 @@ $typography-global-config: mat.define-typography-config(
     ),
 );
 
-html,
-body {
-  height: 100%;
+.mat-headline-5,.mat-headline-6, .mat-subtitle-1{
+  margin: 0 !important;
 }
-body {
-  margin: 0 ;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 14px;
-}
+
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 14px; }

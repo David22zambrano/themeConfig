@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { TableComponent } from './table/table.component';
 import { DialogBoxComponent } from './dialog/dialog-box/dialog-box.component';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { BottomSheetBodyComponent } from './bottom-sheet/bottom-sheet-body/bottom-sheet-body.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { DialogBoxComponent } from './dialog/dialog-box/dialog-box.component';
     CardComponent,
     DialogComponent,
     TableComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    BottomSheetComponent,
+    BottomSheetBodyComponent,
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { CardComponent } from './card/card.component';
 import { DashboardComponent } from './dashboard.component';
 import { DialogComponent } from './dialog/dialog.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path:'card',component:CardComponent},
     {path:'dialog',component:DialogComponent},
     {path:'table',component:TableComponent},
+    {path:'bottom-Sheet',component:BottomSheetComponent},
   ]},
 ];
 

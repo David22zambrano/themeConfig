@@ -14,5 +14,9 @@
     {
         "nombre":"table",
         "redirect":"/dashboard/table"
+    },
+    {
+        "nombre":"bottom-Sheet",
+        "redirect":"/dashboard/bottom-Sheet"
     }
 ]
