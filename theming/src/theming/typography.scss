@@ -75,5 +75,8 @@ $typography-global-config: mat.define-typography-config(
   margin: 0 !important;
 }
 
+
+// @include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());
+
 html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 14px; }

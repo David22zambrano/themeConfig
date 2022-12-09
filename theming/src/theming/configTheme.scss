@@ -277,4 +277,10 @@ $light-theme: map.deep-merge(
 }
 
 @include mat.all-component-themes($light-theme);
+
 @include mat.all-component-typographies($typography-global-config);
+
+@include mat.all-legacy-component-typographies($typography-global-config);
+
+
+
