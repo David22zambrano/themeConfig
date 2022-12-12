@@ -122,7 +122,7 @@ $light-background-default: #f1f0ee;
   @include mat.all-component-themes($light-theme);
 }
 .dark-theme {
-  
+  background-color: #1a1a1b;
   @include mat.all-component-colors($dark-theme);
 }
 // ADDING EXTRA COLORS / SUCCESS / WARNING / INFO
@@ -553,6 +553,14 @@ $dark-contrast-text: #000;
   --mat-mdc-radio-checked-ripple-color: #fb8500;
 }
 // MAT AUTOCOMPLETE
+
+
+
+.ight-theme .mat-mdc-form-field.mat-primary {
+  background-color: #4a4a4a;
+
+}
+
 // MAT SLIDE TOGGLE EXTRA COLORS / DARK AND LIGHT MODE
 .light-theme .mat-mdc-slide-toggle.mat-success .mdc-form-field {
   --mdc-switch-selected-focus-state-layer-color: #8fc93a;
