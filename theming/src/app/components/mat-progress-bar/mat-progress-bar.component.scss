@@ -1,0 +1,8 @@
+.progress-bar-container{
+ display: flex;
+ flex-direction: column;
+& mat-progress-bar{
+    box-shadow: none;
+     padding-bottom: 10px;
+}
+}

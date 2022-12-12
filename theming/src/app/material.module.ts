@@ -12,6 +12,13 @@ import { MatChipsModule                 } from '@angular/material/chips';
 import { MatAutocompleteModule          } from '@angular/material/autocomplete';
 import { MatFormFieldModule             } from '@angular/material/form-field';
 import { MatInputModule                 } from '@angular/material/input';
+import { MatProgressSpinnerModule       } from '@angular/material/progress-spinner';
+import { MatProgressBarModule           } from '@angular/material/progress-bar';
+import { MatDatepickerModule            } from '@angular/material/datepicker';
+import { MatStepperModule               } from '@angular/material/stepper';
+import { MatTabsModule                  } from '@angular/material/tabs';
+import { MatSliderModule                } from '@angular/material/slider';
+import { MatSlideToggleModule           } from '@angular/material/slide-toggle';
 
 const component = [
   CommonModule,
@@ -24,7 +31,14 @@ const component = [
   MatChipsModule,
   MatAutocompleteModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatDatepickerModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatSliderModule,
+  MatSlideToggleModule
 ]
 
 @NgModule({

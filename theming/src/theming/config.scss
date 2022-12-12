@@ -1,42 +1,44 @@
-@use '@angular/material' as mat;
+@use "./variants" as variants;
+@use "@angular/material" as mat;
+@use "sass:map";
+@import "./palettes";
 
-/// @param {Map} $primary The primary color map.
-/// @param {Map} $accent The accent color map.
-/// @param {Map} $warn The warn color map.
-/// @param {Map} $success The success color map.
-/// @param {Map} $danger The danger color map.
+//LIGHT MODE COLORS
+$primary-color: mat.define-palette($primary);
+$accent-color: mat.define-palette($accent);
+$warn-color: mat.define-palette($warn);
+$success-color: mat.define-palette($success);
+$warning-color: mat.define-palette($warning);
+$info-color: mat.define-palette($info);
 
-@function fs-light-theme(
-  $primary: mat.define-palette(mat.$pink-palette, 200),
-  $accent: mat.define-palette(mat.$pink-palette, A100),
-  $warn: mat.define-palette(mat.$pink-palette),
-  $success: mat.define-palette(mat.$indigo-palette),
-  $danger: mat.define-palette(mat.$red-palette)
-) {
-  $light-theme: mat.define-light-theme(
-    (
-      color: (
-        primary: $primary,
-        accent: $accent,
-        warn: $warn,
-      ),
-    )
-  );
-  $danger-success: (
-    success: $success,
-    danger: $danger,
-  );
-  @return map.deep-merge($light-theme, $danger-success);
-}
+//DARK MODE COLOR
+$dark-primary-color: mat.define-palette($dark-primary);
+$dark-accent-color: mat.define-palette($dark-accent);
+$dark-warn-color: mat.define-palette($dark-warn);
+$dark-success-color: mat.define-palette($dark-success);
+$dark-info-color: mat.define-palette($dark-info);
+$dark-warning-color: mat.define-palette($dark-warning);
 
- .light-theme{
+$light-theme: mat.define-light-theme(
+  (
+    color:( primary: $primary-color , accent: $accent-color,warning: $warning-color),
+  ),
+  
+);
+$light-theme: map.deep-merge(
+  $light-theme,(
+    success: $success-color,
+    color:(
+    success: $success-color,
+    ),
+  )
+);
+$light-theme-variants: (
+  success: $success-color,
+);
 
-     &.mat-button.mat-success
-     &.mat-raised-button.mat-success {
-       color: #000;
-       background-color: #16b53642;
-       
-     }
- }
+@include mat.core-theme($light-theme);
+@include mat.all-component-themes($light-theme);
+@include mat.button-theme($light-theme);
 
-
+@include variants.color($light-theme, $light-theme-variants);

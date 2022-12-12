@@ -63,6 +63,7 @@ $dark-info-color: mat.define-palette($dark-info);
 $dark-warning-color: mat.define-palette($dark-warning);
 
 // DEFINITION THEME
+// LIGHT THEME
 $light-theme: mat.define-light-theme(
   (
     color: (
@@ -87,6 +88,7 @@ $light-theme: map.deep-merge(
     ),
   )
 );
+//DARK THEME
 $dark-theme: mat.define-dark-theme(
   (
     color: (
@@ -112,23 +114,29 @@ $dark-theme: map.deep-merge(
     ),
   )
 );
-// @debug $light-theme;
-// LIGHT THEME
+
 $light-background-default: #f1f0ee;
+
 .light-theme {
   background-color: $light-background-default;
   @include mat.all-component-themes($light-theme);
 }
 .dark-theme {
+  
   @include mat.all-component-colors($dark-theme);
 }
 // ADDING EXTRA COLORS / SUCCESS / WARNING / INFO
 
-$success-main-color: mat.get-color-from-palette($dark-success, 500);
-$info-main-color: mat.get-color-from-palette($dark-info, 500);
-$warning-main-color: mat.get-color-from-palette($dark-warning, 500);
+$success-main-color: mat.get-color-from-palette($success, 500);
+$info-main-color: mat.get-color-from-palette($info, 500);
+$warning-main-color: mat.get-color-from-palette($warning, 500);
+
+$dark-success-color: mat.get-color-from-palette($dark-success, 500);
+$dark-info-color: mat.get-color-from-palette($dark-info, 500);
+$dark-warning-color: mat.get-color-from-palette($dark-warning, 500);
 
 $light-contrast-text: #fff;
+$dark-contrast-text: #000;
 
 // EXTRA COLORS CONFIGURATION
 @mixin success-config-color {
@@ -143,44 +151,56 @@ $light-contrast-text: #fff;
   background-color: $warning-main-color;
   color: $light-contrast-text;
 }
+@mixin  dark-success-config-color {
+  background-color: $dark-success-color;
+  color: $dark-contrast-text;
+}
+@mixin  dark-info-config-color {
+  background-color: $dark-info-color;
+  color: $dark-contrast-text;
+}
+@mixin  dark-warning-config-color {
+  background-color: $dark-warning-color;
+  color: $dark-contrast-text;
+}
 // MAT TOOLBAR EXTRA COLORS /  DARK AND LIGHT MODE
 
 .light-theme .mat-toolbar.mat-success {
   @include success-config-color;
 }
 .dark-theme .mat-toolbar.mat-success {
-  @include success-config-color;
+  @include dark-success-config-color;
 }
 .light-theme .mat-toolbar.mat-info {
   @include info-config-color;
 }
 .dark-theme .mat-toolbar.mat-info {
-  @include info-config-color;
+  @include dark-info-config-color;
 }
 .light-theme .mat-toolbar.mat-warning {
   @include warning-config-color;
 }
 .dark-theme .mat-toolbar.mat-warning {
-  @include warning-config-color;
+  @include dark-warning-config-color;
 }
 // BASIC BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
 .light-theme .mat-mdc-button.mat-success {
   color: $success-main-color;
 }
 .dark-theme .mat-mdc-button.mat-success {
-  color: $success-main-color;
+  color: $dark-success-color;
 }
 .light-theme .mat-mdc-button.mat-info {
   color: $info-main-color;
 }
 .dark-theme .mat-mdc-button.mat-info {
-  color: $info-main-color;
+  color: $dark-info-color;
 }
 .light-theme .mat-mdc-button.mat-warning {
   color: $warning-main-color;
 }
 .dark-theme .mat-mdc-button.mat-warning {
-  color: $warning-main-color;
+  color: $dark-warning-color;
 }
 // MAT RAISED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
 
@@ -188,19 +208,19 @@ $light-contrast-text: #fff;
   @include success-config-color;
 }
 .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-success {
-  @include success-config-color;
+  @include dark-success-config-color;
 }
 .light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
   @include info-config-color;
 }
 .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
-  @include info-config-color;
+  @include dark-info-config-color;
 }
 .light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
   @include warning-config-color;
 }
 .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
-  @include warning-config-color;
+  @include dark-warning-config-color;
 }
 
 // MAT STROKED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
@@ -215,13 +235,13 @@ $light-contrast-text: #fff;
   color: $info-main-color;
 }
 .dark-theme .mat-mdc-outlined-button.mat-info {
-  color: $info-main-color;
+  color: $dark-info-color;
 }
 .light-theme .mat-mdc-outlined-button.mat-warning {
   color: $warning-main-color;
 }
 .dark-theme .mat-mdc-outlined-button.mat-warning {
-  color: $warning-main-color;
+  color: $dark-warning-color;
 }
 
 // FLAT BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
@@ -230,19 +250,19 @@ $light-contrast-text: #fff;
   @include success-config-color;
 }
 .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-success {
-  @include success-config-color;
+  @include dark-success-config-color;
 }
 .light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
   @include info-config-color;
 }
 .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
-  @include info-config-color;
+  @include dark-info-config-color;
 }
 .light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
   @include warning-config-color;
 }
 .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
-  @include warning-config-color;
+  @include dark-warning-config-color;
 }
 
 // ICON BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
@@ -251,19 +271,19 @@ $light-contrast-text: #fff;
   color: $success-main-color;
 }
 .dark-theme .mat-mdc-icon-button.mat-success {
-  color: $success-main-color;
+  color: $dark-success-color
 }
 .light-theme .mat-mdc-icon-button.mat-info {
   color: $info-main-color;
 }
 .dark-theme .mat-mdc-icon-button.mat-info {
-  color: $info-main-color;
+  color: $dark-info-color; 
 }
 .light-theme .mat-mdc-icon-button.mat-warning {
   color: $warning-main-color;
 }
 .dark-theme .mat-mdc-icon-button.mat-warning {
-  color: $warning-main-color;
+  color: $dark-warning-color;
 }
 
 // ICON EXTRA COLORS /  DARK AND LIGHT MODE
@@ -272,19 +292,19 @@ $light-contrast-text: #fff;
   color: $success-main-color;
 }
 .dark-theme .mat-icon.mat-success {
-  color: $success-main-color;
+  color: $dark-success-color;
 }
 .light-theme .mat-icon.mat-info {
   color: $info-main-color;
 }
 .dark-theme .mat-icon.mat-info {
-  color: $info-main-color;
+  color: $dark-info-color;
 }
 .light-theme .mat-icon.mat-warning {
   color: $warning-main-color;
 }
 .dark-theme .mat-icon.mat-warning {
-  color: $warning-main-color;
+  color: $dark-warning-color;
 }
 // MAT FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
 
@@ -292,19 +312,19 @@ $light-contrast-text: #fff;
   @include success-config-color;
 }
 .dark-theme .mat-mdc-fab.mat-success {
-  @include success-config-color;
+  @include dark-success-config-color;
 }
 .light-theme .mat-mdc-fab.mat-info {
   @include info-config-color;
 }
 .dark-theme .mat-mdc-fab.mat-info {
-  @include info-config-color;
+  @include dark-info-config-color;
 }
 .light-theme .mat-mdc-fab.mat-warning {
   @include warning-config-color;
 }
 .dark-theme .mat-mdc-fab.mat-warning {
-  @include warning-config-color;
+  @include dark-warning-config-color;
 }
 // MAT MINI FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
 
@@ -341,14 +361,15 @@ $light-contrast-text: #fff;
   @include info-config-color;
 }
 .light-theme .mat-badge.mat-badge.mat-warning {
-  @include info-config-color;
+  @include warning-config-color;
 }
 .dark-theme .mat-badge.mat-badge.mat-warning {
-  @include info-config-color;
+  @include warning-config-color;
 }
 
-// MAT CHECKBOX / MAT RADIO BUTTONS --THESE ONLY CAN BE CHANGED  TO 'PRIMARY' OR 'WARN' COLOR. https://material.angular.io/components/checkbox/overview
-
+.light-theme .mat-mdc-radio-button.mat-success .mdc-form-field {
+  @include success-config-color;
+}
 // MAT CHIPS EXTRA COLORS / DARK AND LIGHT MODE
 .light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
   @include success-config-color;
@@ -368,4 +389,246 @@ $light-contrast-text: #fff;
 .dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-warning {
   @include warning-config-color;
 }
+
+//MAT SPINNER EXTRA COLORS / DARK AND LIGHT MODE --PALETTE COLOR USED : 500
+.light-theme .mat-mdc-progress-spinner.mat-success {
+  --mdc-circular-progress-active-indicator-color: #8fc93a;
+}
+.dark-theme .mat-mdc-progress-spinner.mat-success {
+  --mdc-circular-progress-active-indicator-color: #8fc93a;
+}
+.light-theme .mat-mdc-progress-spinner.mat-info {
+  // @include info-config-color;
+  --mdc-circular-progress-active-indicator-color: #2d9fc5;
+}
+.dark-theme .mat-mdc-progress-spinner.mat-info {
+  // @include info-config-color;
+  --mdc-circular-progress-active-indicator-color: #2d9fc5;
+}
+.light-theme .mat-mdc-progress-spinner.mat-warning {
+  // @include warning-config-color;
+  --mdc-circular-progress-active-indicator-color: #fb8500;
+}
+.dark-theme .mat-mdc-progress-spinner.mat-warning {
+  // @include warning-config-color;
+  --mdc-circular-progress-active-indicator-color: #fb8500;
+}
+
+// MAT PROGRESS BAR EXTRA COLORS / DARK AND LIGHT THEME --PALETTE COLOR USED : 500
+
+.light-theme .mat-mdc-progress-bar.mat-success {
+  --mdc-linear-progress-active-indicator-color: #8fc93a;
+}
+.dark-theme .mat-mdc-progress-bar.mat-success {
+  --mdc-linear-progress-active-indicator-color: #8fc93a;
+}
+.light-theme .mat-mdc-progress-bar.mat-info {
+  --mdc-linear-progress-active-indicator-color:  #2d9fc5;
+}
+.dark-theme .mat-mdc-progress-bar.mat-info {
+  --mdc-linear-progress-active-indicator-color:  #2d9fc5;
+}
+.light-theme .mat-mdc-progress-bar.mat-warning {
+  --mdc-linear-progress-active-indicator-color: #fb8500;
+}
+.dark-theme .mat-mdc-progress-bar.mat-warning {
+  --mdc-linear-progress-active-indicator-color: #fb8500;
+}
+
+// MAT SLIDER EXTRA COLORS / DARK AND LIGHT MODE
+
+.light-theme .mat-mdc-slider.mat-success {
+  --mdc-slider-handle-color: #8fc93a;
+  --mdc-slider-focus-handle-color: #8fc93a;
+  --mdc-slider-hover-handle-color: #8fc93a;
+  --mdc-slider-active-track-color: #8fc93a;
+  --mdc-slider-inactive-track-color: #8fc93a;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;
+  --mat-mdc-slider-ripple-color: #8fc93a;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+.dark-theme .mat-mdc-slider.mat-success {
+  --mdc-slider-handle-color: #8fc93a;
+  --mdc-slider-focus-handle-color: #8fc93a;
+  --mdc-slider-hover-handle-color: #8fc93a;
+  --mdc-slider-active-track-color: #8fc93a;
+  --mdc-slider-inactive-track-color: #8fc93a;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;
+  --mat-mdc-slider-ripple-color: #8fc93a;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+.light-theme .mat-mdc-slider.mat-info {
+  --mdc-slider-handle-color: #2d9fc5;
+  --mdc-slider-focus-handle-color: #2d9fc5;
+  --mdc-slider-hover-handle-color: #2d9fc5;
+  --mdc-slider-active-track-color: #2d9fc5;
+  --mdc-slider-inactive-track-color: #2d9fc5;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #2d9fc5;
+  --mat-mdc-slider-ripple-color: #2d9fc5;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+.dark-theme .mat-mdc-slider.mat-info {
+  --mdc-slider-handle-color: #4dadce;
+  --mdc-slider-focus-handle-color: #4dadce;
+  --mdc-slider-hover-handle-color: #4dadce;
+  --mdc-slider-active-track-color: #4dadce;
+  --mdc-slider-inactive-track-color: #4dadce;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;
+  --mat-mdc-slider-ripple-color: #4dadce;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+.light-theme .mat-mdc-slider.mat-warning {
+  --mdc-slider-handle-color: #fb8500;
+  --mdc-slider-focus-handle-color: #fb8500;
+  --mdc-slider-hover-handle-color: #fb8500;
+  --mdc-slider-active-track-color: #fb8500;
+  --mdc-slider-inactive-track-color: #fb8500;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+  --mat-mdc-slider-ripple-color: #fb8500;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+.dark-theme .mat-mdc-slider.mat-warning {
+  --mdc-slider-handle-color: #fb8500;
+  --mdc-slider-focus-handle-color: #fb8500;
+  --mdc-slider-hover-handle-color: #fb8500;
+  --mdc-slider-active-track-color: #fb8500;
+  --mdc-slider-inactive-track-color: #fb8500;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+  --mat-mdc-slider-ripple-color: #fb8500;
+  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+}
+// MAT CHECKBOX / MAT RADIO BUTTONS --THESE ONLY CAN BE CHANGED  TO 'PRIMARY' OR 'WARN' COLOR. https://material.angular.io/components/checkbox/overview
+.light-theme .mat-mdc-radio-button.mat-success{
+  --mdc-radio-selected-focus-icon-color: #8fc93a;
+  --mdc-radio-selected-hover-icon-color: #8fc93a;
+  --mdc-radio-selected-icon-color: #8fc93a;
+  --mdc-radio-selected-pressed-icon-color: #8fc93a;
+  --mat-mdc-radio-checked-ripple-color: #8fc93a;
+}
+.dark-theme .mat-mdc-radio-button.mat-success{
+  --mdc-radio-selected-focus-icon-color: #8fc93a;
+  --mdc-radio-selected-hover-icon-color: #8fc93a;
+  --mdc-radio-selected-icon-color: #8fc93a;
+  --mdc-radio-selected-pressed-icon-color: #8fc93a;
+  --mat-mdc-radio-checked-ripple-color: #8fc93a;
+}
+.light-theme .mat-mdc-radio-button.mat-info{
+  --mdc-radio-selected-focus-icon-color: #2d9fc5;
+  --mdc-radio-selected-hover-icon-color: #2d9fc5;
+  --mdc-radio-selected-icon-color: #2d9fc5;
+  --mdc-radio-selected-pressed-icon-color: #2d9fc5;
+  --mat-mdc-radio-checked-ripple-color: #2d9fc5;
+}
+.dark-theme .mat-mdc-radio-button.mat-info{
+  --mdc-radio-selected-focus-icon-color: #2d9fc5;
+  --mdc-radio-selected-hover-icon-color: #2d9fc5;
+  --mdc-radio-selected-icon-color: #2d9fc5;
+  --mdc-radio-selected-pressed-icon-color: #2d9fc5;
+  --mat-mdc-radio-checked-ripple-color: #2d9fc5;
+}
+.light-theme .mat-mdc-radio-button.mat-warning{
+  --mdc-radio-selected-focus-icon-color: #fb8500;
+  --mdc-radio-selected-hover-icon-color: #fb8500;
+  --mdc-radio-selected-icon-color: #fb8500;
+  --mdc-radio-selected-pressed-icon-color: #fb8500;
+  --mat-mdc-radio-checked-ripple-color: #fb8500;
+}
+.dark-theme .mat-mdc-radio-button.mat-warning{
+  --mdc-radio-selected-focus-icon-color: #fb8500;
+  --mdc-radio-selected-hover-icon-color: #fb8500;
+  --mdc-radio-selected-icon-color: #fb8500;
+  --mdc-radio-selected-pressed-icon-color: #fb8500;
+  --mat-mdc-radio-checked-ripple-color: #fb8500;
+}
 // MAT AUTOCOMPLETE
+// MAT SLIDE TOGGLE EXTRA COLORS / DARK AND LIGHT MODE
+.light-theme .mat-mdc-slide-toggle.mat-success .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #8fc93a;
+  --mdc-switch-selected-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-state-layer-color: #8fc93a;
+  --mdc-switch-selected-pressed-state-layer-color: #8fc93a;
+  --mdc-switch-selected-focus-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-handle-color: #8fc93a;
+  --mdc-switch-selected-pressed-handle-color: #8fc93a;
+  --mdc-switch-selected-focus-track-color: #8fc93a;
+  --mdc-switch-selected-hover-track-color: #8fc93a;
+  --mdc-switch-selected-pressed-track-color: #8fc93a;
+  --mdc-switch-selected-track-color: #8fc93a;
+}
+.dark-theme .mat-mdc-slide-toggle.mat-success .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #8fc93a;
+  --mdc-switch-selected-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-state-layer-color: #8fc93a;
+  --mdc-switch-selected-pressed-state-layer-color: #8fc93a;
+  --mdc-switch-selected-focus-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-handle-color: #8fc93a;
+  --mdc-switch-selected-pressed-handle-color: #8fc93a;
+  --mdc-switch-selected-focus-track-color: #8fc93a;
+  --mdc-switch-selected-hover-track-color: #8fc93a;
+  --mdc-switch-selected-pressed-track-color: #8fc93a;
+  --mdc-switch-selected-track-color: #8fc93a;
+}
+.light-theme .mat-mdc-slide-toggle.mat-info .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-pressed-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-focus-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-handle-color: #2d9fc5;
+  --mdc-switch-selected-pressed-handle-color: #2d9fc5;
+  --mdc-switch-selected-focus-track-color: #2d9fc5;
+  --mdc-switch-selected-hover-track-color: #2d9fc5;
+  --mdc-switch-selected-pressed-track-color: #2d9fc5;
+  --mdc-switch-selected-track-color: #2d9fc5;
+}
+.dark-theme .mat-mdc-slide-toggle.mat-info .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-pressed-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-focus-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-handle-color: #2d9fc5;
+  --mdc-switch-selected-pressed-handle-color: #2d9fc5;
+  --mdc-switch-selected-focus-track-color: #2d9fc5;
+  --mdc-switch-selected-hover-track-color: #2d9fc5;
+  --mdc-switch-selected-pressed-track-color: #2d9fc5;
+  --mdc-switch-selected-track-color: #2d9fc5;
+}
+.light-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #fb8500;
+  --mdc-switch-selected-handle-color: #fb8500;
+  --mdc-switch-selected-hover-state-layer-color: #fb8500;
+  --mdc-switch-selected-pressed-state-layer-color: #fb8500;
+  --mdc-switch-selected-focus-handle-color: #fb8500;
+  --mdc-switch-selected-hover-handle-color: #fb8500;
+  --mdc-switch-selected-pressed-handle-color: #fb8500;
+  --mdc-switch-selected-focus-track-color: #fb8500;
+  --mdc-switch-selected-hover-track-color: #fb8500;
+  --mdc-switch-selected-pressed-track-color: #fb8500;
+  --mdc-switch-selected-track-color: #fb8500;
+}
+.dark-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field {
+  --mdc-switch-selected-focus-state-layer-color: #fb8500;
+  --mdc-switch-selected-handle-color: #fb8500;
+  --mdc-switch-selected-hover-state-layer-color: #fb8500;
+  --mdc-switch-selected-pressed-state-layer-color: #fb8500;
+  --mdc-switch-selected-focus-handle-color: #fb8500;
+  --mdc-switch-selected-hover-handle-color: #fb8500;
+  --mdc-switch-selected-pressed-handle-color: #fb8500;
+  --mdc-switch-selected-focus-track-color: #fb8500;
+  --mdc-switch-selected-hover-track-color: #fb8500;
+  --mdc-switch-selected-pressed-track-color: #fb8500;
+  --mdc-switch-selected-track-color: #fb8500;
+}
