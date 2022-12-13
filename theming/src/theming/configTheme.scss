@@ -129,6 +129,8 @@ $light-theme-variants: (
 );
 
 $light-background-default: #f1f0ee;
+$dark-background-default: #1a1a1b;
+
 
 .light-theme {
   background-color: $light-background-default;
@@ -136,7 +138,7 @@ $light-background-default: #f1f0ee;
   @include variants.color($light-theme, $light-theme-variants);
 }
 .dark-theme {
-  background-color: #1a1a1b;
+  background-color: $dark-background-default;
   @include mat.all-component-colors($dark-theme);
   @include variants.color($dark-theme, $light-theme-variants);
 }
@@ -381,9 +383,6 @@ $light-background-default: #f1f0ee;
 // .dark-theme .mat-badge.mat-badge.mat-warning {
 //   @include warning-config-color;
 // }
-
-// .light-theme .mat-mdc-radio-button.mat-success .mdc-form-field {
-//   @include success-config-color;
 // }
 // // MAT CHIPS EXTRA COLORS / DARK AND LIGHT MODE
 // .light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
@@ -405,7 +404,8 @@ $light-background-default: #f1f0ee;
 //   @include warning-config-color;
 // }
 
-// //MAT SPINNER EXTRA COLORS / DARK AND LIGHT MODE --PALETTE COLOR USED : 500
+// //MAT SPINNER EXTRA COLORS / DARK AND LIGHT MODE 
+
 // .light-theme .mat-mdc-progress-spinner.mat-success {
 //   --mdc-circular-progress-active-indicator-color: #8fc93a;
 // }
