@@ -37,8 +37,8 @@ $light-theme-variants: (
   success: $success-color,
 );
 
-@include mat.core-theme($light-theme);
+// @include mat.core-theme($light-theme);
 @include mat.all-component-themes($light-theme);
-@include mat.button-theme($light-theme);
+// @include mat.button-theme($light-theme);
 
-@include variants.color($light-theme, $light-theme-variants);
+// @include variants.color($light-theme, $light-theme-variants);

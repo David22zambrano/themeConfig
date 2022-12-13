@@ -6,7 +6,7 @@ $_ripple-opacity: 0.1;
 @mixin _focus-overlay-color($config-or-theme, $variants) {
   $config: mat.get-color-config($config-or-theme);
   @each $variant, $variant-palette in $variants {
-    &.mat-#{$variant} .mat-button-focus-overlay {
+    &.mat-#{$variant} .mat-button-focus-overlay .mat-mdc-form-field{
       background-color: mat.get-color-from-palette($variant-palette);
     }
   }
@@ -20,7 +20,7 @@ $_ripple-opacity: 0.1;
 }
 @mixin _ripple-color($theme, $hue, $opacity, $variants) {
   @each $variant, $variant-palette in $variants {
-    &.mat-#{$variant} .mat-ripple-element {
+    &.mat-#{$variant} .mat-ripple-element .mat-mdc-form-field{
       @include _ripple-background($variant-palette, $hue, $opacity);
     }
   }
@@ -45,19 +45,13 @@ $_ripple-opacity: 0.1;
   $config: mat.get-color-config($config-or-theme);
   $foreground: map.get($config, foreground);
   $background: map.get($config, background);
-  .mat-button,
-  .mat-icon-button,
-  .mat-icon,
-  .mat-stroked-button,
-  .mat-chip {
+  .mat-mdc-button,.mat-mdc-stroked-button, .mat-mdc-form-field.mat-success  {
     @include _theme-property($config, 'color', text, $variants);
     @include _focus-overlay-color($config, $variants);
+    
   }
-  .mat-flat-button,
-  .mat-raised-button,
-  .mat-fab,
-  .mat-mini-fab,
-  .mat-chip {
+  
+   .mat-mdc-raised-button {
     @include _theme-property($config, 'color', default-contrast, $variants);
     @include _theme-property($config, 'background-color', default, $variants);
     @include _ripple-color(
