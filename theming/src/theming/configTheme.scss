@@ -3,6 +3,9 @@
 @use "@angular/material" as mat;
 @use "sass:map";
 @import "./palettes";
+// @import "./variables";
+// @import "./mixins";
+
 
 $other: (
   divider: rgba(16, 24, 64, 0.12),
@@ -46,6 +49,8 @@ $typography-config: map.merge(
 }
 
 @include mat.core();
+
+
 //LIGHT MODE COLORS
 $primary-color: mat.define-palette($primary);
 $accent-color: mat.define-palette($accent);
@@ -63,6 +68,7 @@ $dark-info-color: mat.define-palette($dark-info);
 $dark-warning-color: mat.define-palette($dark-warning);
 
 // DEFINITION THEME
+
 // LIGHT THEME
 $light-theme: mat.define-light-theme(
   (
@@ -125,7 +131,7 @@ $light-background-default: #f1f0ee;
   background-color: #1a1a1b;
   @include mat.all-component-colors($dark-theme);
 }
-// ADDING EXTRA COLORS / SUCCESS / WARNING / INFO
+//VARIABLES 
 
 $success-main-color: mat.get-color-from-palette($success, 500);
 $info-main-color: mat.get-color-from-palette($info, 500);
@@ -138,7 +144,7 @@ $dark-warning-color: mat.get-color-from-palette($dark-warning, 500);
 $light-contrast-text: #fff;
 $dark-contrast-text: #000;
 
-// EXTRA COLORS CONFIGURATION
+// MIXINS
 @mixin success-config-color {
   background-color: $success-main-color;
   color: $light-contrast-text;
@@ -151,15 +157,15 @@ $dark-contrast-text: #000;
   background-color: $warning-main-color;
   color: $light-contrast-text;
 }
-@mixin  dark-success-config-color {
+@mixin dark-success-config-color {
   background-color: $dark-success-color;
   color: $dark-contrast-text;
 }
-@mixin  dark-info-config-color {
+@mixin dark-info-config-color {
   background-color: $dark-info-color;
   color: $dark-contrast-text;
 }
-@mixin  dark-warning-config-color {
+@mixin dark-warning-config-color {
   background-color: $dark-warning-color;
   color: $dark-contrast-text;
 }
@@ -470,7 +476,7 @@ $dark-contrast-text: #000;
   --mdc-slider-with-tick-marks-active-container-color: #fff;
   --mdc-slider-with-tick-marks-inactive-container-color: #2d9fc5;
   --mat-mdc-slider-ripple-color: #2d9fc5;
-  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+  --mat-mdc-slider-hover-ripple-color: #309abd7f;
   --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
 }
 .dark-theme .mat-mdc-slider.mat-info {
@@ -497,18 +503,18 @@ $dark-contrast-text: #000;
   --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
   --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
 }
-.dark-theme .mat-mdc-slider.mat-warning {
-  --mdc-slider-handle-color: #fb8500;
-  --mdc-slider-focus-handle-color: #fb8500;
-  --mdc-slider-hover-handle-color: #fb8500;
-  --mdc-slider-active-track-color: #fb8500;
-  --mdc-slider-inactive-track-color: #fb8500;
-  --mdc-slider-with-tick-marks-active-container-color: #fff;
-  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
-  --mat-mdc-slider-ripple-color: #fb8500;
-  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
-  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
-}
+// .dark-theme .mat-mdc-slider.mat-warning {
+//   --mdc-slider-handle-color: #fb8500;
+//   --mdc-slider-focus-handle-color: #fb8500;
+//   --mdc-slider-hover-handle-color: #fb8500;
+//   --mdc-slider-active-track-color: #fb8500;
+//   --mdc-slider-inactive-track-color: #fb8500;
+//   --mdc-slider-with-tick-marks-active-container-color: #fff;
+//   --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+//   --mat-mdc-slider-ripple-color: #fb8500;
+//   --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+//   --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+// }
 // MAT CHECKBOX / MAT RADIO BUTTONS --THESE ONLY CAN BE CHANGED  TO 'PRIMARY' OR 'WARN' COLOR. https://material.angular.io/components/checkbox/overview
 .light-theme .mat-mdc-radio-button.mat-success{
   --mdc-radio-selected-focus-icon-color: #8fc93a;
@@ -556,8 +562,9 @@ $dark-contrast-text: #000;
 
 
 
-.ight-theme .mat-mdc-form-field.mat-primary {
-  background-color: #4a4a4a;
+.dark-theme .mdc-text-field--filled:not(.mdc-text-field--disabled), .dark-theme .mat-autocomplete, .dark-theme .mat-mdc-form-field-focus-overlay{
+
+  background-color: transparent;
 
 }
 
