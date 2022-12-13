@@ -8,78 +8,91 @@ $typography-global-config: mat.define-typography-config(
     mat.define-typography-level(
       $font-family: Nunito,
       $font-weight: 300,
-      $font-size: 6rem,
-      $line-height: 1.1167,
-      $letter-spacing: -0.01562em,
+      $font-size: 96px,
+      $line-height: 112.03px,
+      $letter-spacing: -1.5px,
     ),
   /*healdine-6 is a h2*/ $headline-6:
     mat.define-typography-level(
-      $font-family: Roboto,
-      $font-weight: 300,
-      $font-size: 3.75rem,
-      $line-height: 1.2,
-      $letter-spacing: -0.008833em,
+      $font-family: Nunito,
+      $font-weight: 400,
+      $font-size: 60px,
+      $line-height: 72px,
+      $letter-spacing: -0.5px,
     ),
   /*subtitle-1 is a h3*/ $subtitle-1:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 400,
-      $font-size: 1rem,
-      $line-height: 1.75,
-      $letter-spacing: 0.00938em,
+      $font-size: 16px,
+      $line-height: 28px,
+      $letter-spacing: 0.15px,
     ),
   /*subtitle-2 is a h4*/ $subtitle-2:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 500,
-      $font-size: 0.875rem,
-      $line-height: 1.57,
-      $letter-spacing: 0.00714em,
+      $font-size: 14px,
+      $line-height: 21.98px,
+      $letter-spacing: 0.1px,
     ),
   $body-1:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 400,
-      $font-size: 0.875rem,
-      $line-height: 1.5,
-      $letter-spacing: 0.001071em,
+      $font-size: 14px,
+      $line-height: 20.02px,
+      $letter-spacing: 0.17px,
     ),
-  $body-2:
+  /*body 2 is the default font size to text in angular material v15*/ $body-2:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 400,
-      $font-size: 1rem,
-      $line-height: 1.5,
-      $letter-spacing: 0.00938em,
+      $font-size: 16px,
+      $line-height: 24px,
+      $letter-spacing: 0.15px,
     ),
   $caption:
     mat.define-typography-level(
       $font-family: Roboto,
-      $font-weight: 400,
-      $font-size: 0.75rem,
-      $line-height: 1.66,
-      $letter-spacing: 0.03333em,
+      $font-weight: 500,
+      $font-size: 12px,
+      $line-height: 19.92px,
+      $letter-spacing: 0.4px,
     ),
   $button:
     mat.define-typography-level(
       $font-family: Roboto,
       $font-weight: 500,
-      $font-size: 0.875rem,
-      $line-height: 1.75,
-      $letter-spacing: 0.02857em,
+      $font-size: 14px,
+      $line-height: 24px,
+      $letter-spacing: 0.4px,
     ),
 );
 
 .mat-headline-5,
 .mat-h1,
+h1,
 .mat-headline-6,
 .mat-h2,
+h2,
 .mat-subtitle-1,
-.mat-h3 {
+.mat-h3,
+h3,
+.mat-h4,
+h4,
+.mat-body-1,
+p,
+.mat-h5,
+h5,
+.mat-h6,
+h6 {
   margin: 0 !important;
 }
 
-// @include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());
+// @include mat.all-legacy-component-typographies($typography-global-config);
+
+@include mat.all-component-typographies($typography-global-config);
 
 html,
 body {
@@ -87,6 +100,4 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 14px;
 }

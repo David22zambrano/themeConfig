@@ -18,5 +18,9 @@
     {
         "nombre":"bottom-Sheet",
         "redirect":"/dashboard/bottom-Sheet"
+    },
+    {
+        "nombre":"expansion-panel",
+        "redirect":"/dashboard/expansion-panel"
     }
 ]
