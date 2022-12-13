@@ -90,14 +90,4 @@ h6 {
   margin: 0 !important;
 }
 
-// @include mat.all-legacy-component-typographies($typography-global-config);
-
 @include mat.all-component-typographies($typography-global-config);
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-}

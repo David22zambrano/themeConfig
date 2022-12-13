@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/theming/typography.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,7 +94,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/theming/palettes.scss",
               "src/styles.scss"
             ],
             "scripts": []
