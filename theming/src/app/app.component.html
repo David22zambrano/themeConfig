@@ -43,7 +43,7 @@
 </mat-slider>
 <mat-divider></mat-divider>
 
-<mat-radio-button value="2" size="small" color="primary"></mat-radio-button>
+<mat-radio-button value="2" size="small"></mat-radio-button>
 <mat-radio-button value="3"></mat-radio-button>
 <mat-radio-button value="1" size="large" color="warn"> </mat-radio-button>
 <mat-divider></mat-divider>
@@ -55,6 +55,7 @@
   <mat-spinner size="small"></mat-spinner>
   <mat-spinner color="accent"></mat-spinner>
 </section>
+<section>
 <table mat-table  size="small" [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -75,3 +76,4 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+</section>
