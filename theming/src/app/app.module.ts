@@ -18,6 +18,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatRadioModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
