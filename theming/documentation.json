@@ -5,73 +5,7 @@
     "guards": [],
     "interceptors": [],
     "classes": [],
-    "directives": [
-        {
-            "name": "DirectivasColor",
-            "id": "directive-DirectivasColor-c7db676ee6f4a317c1723745ceb24e0881f5df39a55a44f82c76b71fc6b176dfee027f38476fffbe616a44bf564ebb3e777fbd9cf4059d9f55f16f3e57cf8b7b",
-            "file": "src/theming/config.ts",
-            "type": "directive",
-            "description": "",
-            "rawdescription": "\n",
-            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\r\n\r\n@Directive({\r\n  selector: '[]'\r\n})\r\nexport class DirectivasColor {\r\n\r\n\r\n  constructor(private el: ElementRef) {\r\n    el.nativeElement.style.customProperty = true;\r\n  }\r\n  \r\n  @Input() color: String | any ;\r\n  \r\n  ngOnChanges() {\r\n    switch(this.color) {\r\n      case 'success':\r\n        this.el.nativeElement.style.background = '#8fc93a';\r\n        return ;\r\n        \r\n        case 'warning':\r\n          this.el.nativeElement.style.background = \"#c02c2c\";\r\n          return ;\r\n          \r\n          \r\n          case 'info':\r\n            this.el.nativeElement.style.background = \"#fa7200\";\r\n            return ;\r\n\r\n      default:\r\n        break;\r\n    }\r\n  }\r\n}",
-            "selector": "[]",
-            "providers": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "String | any",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnChanges",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 15,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [
-                    {
-                        "name": "el",
-                        "type": "ElementRef",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    }
-                ],
-                "line": 6,
-                "jsdoctags": [
-                    {
-                        "name": "el",
-                        "type": "ElementRef",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            }
-        }
-    ],
+    "directives": [],
     "components": [
         {
             "name": "AppComponent",
@@ -1598,15 +1532,6 @@
                 "coveragePercent": 83,
                 "coverageCount": "5/6",
                 "status": "very-good"
-            },
-            {
-                "filePath": "src/theming/config.ts",
-                "type": "directive",
-                "linktype": "directive",
-                "name": "DirectivasColor",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
             }
         ]
     }
