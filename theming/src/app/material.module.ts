@@ -50,7 +50,6 @@ const component = [
     component
   ],
 })
-export class MaterialModule { }
 
 @NgModule({
   declarations: [],
