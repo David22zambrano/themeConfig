@@ -46,7 +46,6 @@ $overline: mat.define-typography-level(
 $typography-global-config: map.merge(
     mat.define-typography-config(
       $font-family: "Roboto",
-      /*this is a h1*/
        $headline-5:
         mat.define-typography-level(
           $font-family: Nunito,
@@ -55,7 +54,6 @@ $typography-global-config: map.merge(
           $line-height: 112.03px,
           $letter-spacing: -1.5px,
         ),
-      /*healdine-6 is a h2*/ 
       $headline-6:
         mat.define-typography-level(
           $font-family: Nunito,
@@ -88,7 +86,6 @@ $typography-global-config: map.merge(
           $line-height: 24px,
           $letter-spacing: 0.15px,
         ),
-      /*body 2 is the default font size to text in angular material v15*/
       $body-2:
         mat.define-typography-level(
           $font-family: Roboto,
