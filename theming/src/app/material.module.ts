@@ -51,14 +51,3 @@ const component = [
   ],
 })
 export class MaterialModule { }
-
-@NgModule({
-  declarations: [],
-  imports: [
-    component
-  ],
-  exports: [
-    component
-  ],
-})
-export class MaterialModule { }
