@@ -1,0 +1,18 @@
+$toolbar: mat.define-typography-level(24px, 24px, 400, $font-family: 'Roboto'!important);
+
+$typography-config: map.merge(
+    mat.define-typography-config(
+      $headline-5: mat.define-typography-level(96px,96px,300,$font-family:'Nunito'),
+      $headline-6: mat.define-typography-level(60px,60px,400,$font-family:'Nunito'),
+      $subtitle-1: mat.define-typography-level(48px,48px,500,$font-family:'Nunito'),
+      $subtitle-2: mat.define-typography-level(34px,34px,600,$font-family:'Nunito'),
+    ),
+    (
+        "toolbar": $toolbar,
+    ),
+    
+);
+
+.mat-toolbar {
+  @include mat.typography-level($typography-config, "toolbar");
+}
