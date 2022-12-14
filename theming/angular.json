@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theming/typography.scss",
-              "src/styles.scss"
+              "src/theming/typography.scss"
             ],
             "scripts": []
           },
