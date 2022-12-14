@@ -1,8 +1,10 @@
-// LIGHT AND DARK  THEMES
-@import "./configTheme.scss";
+@use "@angular/material" as mat;
 // EXTRA COLORS CONFIGURATION
 @import "./extraColorsConfig.scss";
+// LIGHT AND DARK  THEMES
+@import "./configTheme.scss";
 //PALETTES
 @import "./palettes.scss";
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
+

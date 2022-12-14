@@ -387,3 +387,17 @@ $dark-warning: (
     A700: #000000,
   ),
 );
+$other: (
+  divider: rgba(16, 24, 64, 0.12),
+  outlinedBorder: rgba(16, 24, 64, 0.23),
+  backdropOverlay: rgba(16, 24, 64, 0.5),
+  filledInputBackground: rgba(16, 24, 64, 0.06),
+  standardInputLine: rgba(16, 24, 64, 0.42),
+  snackbar: #1b344c,
+  ratingActive: #ffb400,
+);
+
+$background: (
+  paper: #fbfbfb,
+  default: #f1f0ee,
+);

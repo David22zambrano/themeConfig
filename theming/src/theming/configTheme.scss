@@ -48,7 +48,8 @@ $dark-info-color: mat.define-palette($dark-info);
 $dark-warning-color: mat.define-palette($dark-warning);
 
 // DEFINITION THEME
-
+$light-background-default: #fbfbfb;
+$dark-background-default: #1a1a1b;
 // LIGHT THEME
 $light-theme: mat.define-light-theme(
   (
@@ -100,20 +101,20 @@ $dark-theme: map.deep-merge(
     ),
   )
 );
+
 $light-theme-variants: (
   success: $success-color,
   info: $info-color,
   warning: $warning-color,
 );
-
-$light-background-default: #f1f0ee;
-$dark-background-default: #1a1a1b;
-
-.light-theme {
-  background-color: $light-background-default;
+.light-theme{
+  // background-color: $light-background-default;
   @include mat.all-component-themes($light-theme);
   @include variants.color($light-theme, $light-theme-variants);
+
 }
+
+
 .dark-theme {
   background-color: $dark-background-default;
   @include mat.all-component-colors($dark-theme);

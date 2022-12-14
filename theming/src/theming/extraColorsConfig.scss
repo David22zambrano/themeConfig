@@ -48,7 +48,8 @@ $_ripple-opacity: 0.1;
   $background: map.get($config, background);
   .mat-mdc-button,
   .mat-mdc-outlined-button,
-  .mat-mdc-icon-button {
+  .mat-mdc-icon-button,
+  .mat-mdc-stroked-button {
     @include _theme-property($config, "color", text, $variants);
     @include _focus-overlay-color($config, $variants);
   }
