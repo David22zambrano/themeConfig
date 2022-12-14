@@ -1,8 +1,6 @@
 @use "sass:map";
 @use "sass:meta";
 @use "@angular/material" as mat;
-@use "@material/circular-progress/circular-progress-theme" as
-  mdc-circular-progress-theme;
 
 $_ripple-opacity: 0.1;
 // Applies a focus style to an mat-button element for each of the supported palettes.
@@ -44,15 +42,6 @@ $_ripple-opacity: 0.1;
     }
   }
 }
-@mixin _palette-styles($config, $palette) {
-  $color: mat.get-color-from-palette($config, $palette);
-
-  @each $variant, $variant-palette in $variants {
-    &.mat-#{$variant} {
-      #{$property}: mat.get-color-from-palette($variant-palette, $hue);
-    }
-  }
-}
 @mixin color($config-or-theme, $variants) {
   $config: mat.get-color-config($config-or-theme);
   $foreground: map.get($config, foreground);
@@ -69,7 +58,8 @@ $_ripple-opacity: 0.1;
   .mat-mdc-fab,
   .mat-mdc-mini-fab,
   .mat-badge.mat-badge,
-  .mat-mdc-standard-chip.mat-mdc-chip-selected {
+  .mat-mdc-standard-chip.mat-mdc-chip-selected
+  {
     @include _theme-property($config, "color", default-contrast, $variants);
     @include _theme-property($config, "background-color", default, $variants);
     @include _ripple-color(
@@ -79,7 +69,5 @@ $_ripple-opacity: 0.1;
       $variants
     );
   }
-  .mat-mdc-progress-spinner {
-    @include _palette-styles($config, primary);
-  }
+
 }
