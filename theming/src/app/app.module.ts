@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
 
@@ -22,7 +23,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
 
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
@@ -61,6 +61,7 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
@@ -75,7 +76,6 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
     MatProgressSpinnerModule,
     MatTableModule,
     BrowserAnimationsModule,
-    MaterialModule,
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent],
