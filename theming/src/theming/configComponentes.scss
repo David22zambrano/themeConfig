@@ -1,0 +1,480 @@
+
+// MAT TOOLBAR EXTRA COLORS /  DARK AND LIGHT MODE
+
+.light-theme .mat-toolbar.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-toolbar.mat-success {
+    @include dark-success-config-color;
+  }
+  .light-theme .mat-toolbar.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-toolbar.mat-info {
+    @include dark-info-config-color;
+  }
+  .light-theme .mat-toolbar.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-toolbar.mat-warning {
+    @include dark-warning-config-color;
+  }
+  // BASIC BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+  .light-theme .mat-mdc-button.mat-success {
+    color: $success-main-color;
+  }
+  .dark-theme .mat-mdc-button.mat-success {
+    color: $dark-success-color;
+  }
+  .light-theme .mat-mdc-button.mat-info {
+    color: $info-main-color;
+  }
+  .dark-theme .mat-mdc-button.mat-info {
+    color: $dark-info-color;
+  }
+  .light-theme .mat-mdc-button.mat-warning {
+    color: $warning-main-color;
+  }
+  .dark-theme .mat-mdc-button.mat-warning {
+    color: $dark-warning-color;
+  }
+  // MAT RAISED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-success {
+    @include dark-success-config-color;
+  }
+  .light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-info {
+    @include dark-info-config-color;
+  }
+  .light-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-mdc-raised-button.mat-mdc-button-base.mat-warning {
+    @include dark-warning-config-color;
+  }
+  
+  // MAT STROKED BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-outlined-button.mat-success {
+    color: $success-main-color;
+  }
+  .dark-theme .mat-mdc-outlined-button.mat-success {
+    color: $success-main-color;
+  }
+  .light-theme .mat-mdc-outlined-button.mat-info {
+    color: $info-main-color;
+  }
+  .dark-theme .mat-mdc-outlined-button.mat-info {
+    color: $dark-info-color;
+  }
+  .light-theme .mat-mdc-outlined-button.mat-warning {
+    color: $warning-main-color;
+  }
+  .dark-theme .mat-mdc-outlined-button.mat-warning {
+    color: $dark-warning-color;
+  }
+  
+  // FLAT BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-success {
+    @include dark-success-config-color;
+  }
+  .light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-info {
+    @include dark-info-config-color;
+  }
+  .light-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-mdc-unelevated-button.mat-mdc-button-base.mat-warning {
+    @include dark-warning-config-color;
+  }
+  
+  // ICON BUTTON EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-icon-button.mat-success {
+    color: $success-main-color;
+  }
+  .dark-theme .mat-mdc-icon-button.mat-success {
+    color: $dark-success-color
+  }
+  .light-theme .mat-mdc-icon-button.mat-info {
+    color: $info-main-color;
+  }
+  .dark-theme .mat-mdc-icon-button.mat-info {
+    color: $dark-info-color; 
+  }
+  .light-theme .mat-mdc-icon-button.mat-warning {
+    color: $warning-main-color;
+  }
+  .dark-theme .mat-mdc-icon-button.mat-warning {
+    color: $dark-warning-color;
+  }
+  
+  // ICON EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-icon.mat-success {
+    color: $success-main-color;
+  }
+  .dark-theme .mat-icon.mat-success {
+    color: $dark-success-color;
+  }
+  .light-theme .mat-icon.mat-info {
+    color: $info-main-color;
+  }
+  .dark-theme .mat-icon.mat-info {
+    color: $dark-info-color;
+  }
+  .light-theme .mat-icon.mat-warning {
+    color: $warning-main-color;
+  }
+  .dark-theme .mat-icon.mat-warning {
+    color: $dark-warning-color;
+  }
+  // MAT FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-fab.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-mdc-fab.mat-success {
+    @include dark-success-config-color;
+  }
+  .light-theme .mat-mdc-fab.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-mdc-fab.mat-info {
+    @include dark-info-config-color;
+  }
+  .light-theme .mat-mdc-fab.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-mdc-fab.mat-warning {
+    @include dark-warning-config-color;
+  }
+  // MAT MINI FAB BUTTON EXTRA COLORS / DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-mini-fab.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-mdc-mini-fab.mat-success {
+    @include success-config-color;
+  }
+  .light-theme .mat-mdc-mini-fab.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-mdc-mini-fab.mat-info {
+    @include info-config-color;
+  }
+  .light-theme .mat-mdc-mini-fab.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-mdc-mini-fab.mat-warning {
+    @include warning-config-color;
+  }
+  // MAT BADGE EXTRA COLORS /  DARK AND LIGHT MODE
+  
+  .light-theme .mat-badge.mat-badge.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-badge.mat-badge.mat-success {
+    @include success-config-color;
+  }
+  .light-theme .mat-badge.mat-badge.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-badge.mat-badge.mat-info {
+    @include info-config-color;
+  }
+  .light-theme .mat-badge.mat-badge.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-badge.mat-badge.mat-warning {
+    @include warning-config-color;
+  }
+  
+  .light-theme .mat-mdc-radio-button.mat-success .mdc-form-field {
+    @include success-config-color;
+  }
+  // MAT CHIPS EXTRA COLORS / DARK AND LIGHT MODE
+  .light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
+    @include success-config-color;
+  }
+  .dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-success {
+    @include success-config-color;
+  }
+  .light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-info {
+    @include info-config-color;
+  }
+  .dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-info {
+    @include info-config-color;
+  }
+  .light-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-warning {
+    @include warning-config-color;
+  }
+  .dark-theme .mat-mdc-standard-chip.mat-mdc-chip-selected.mat-warning {
+    @include warning-config-color;
+  }
+  
+  //MAT SPINNER EXTRA COLORS / DARK AND LIGHT MODE --PALETTE COLOR USED : 500
+  .light-theme .mat-mdc-progress-spinner.mat-success {
+    --mdc-circular-progress-active-indicator-color: #8fc93a;
+  }
+  .dark-theme .mat-mdc-progress-spinner.mat-success {
+    --mdc-circular-progress-active-indicator-color: #8fc93a;
+  }
+  .light-theme .mat-mdc-progress-spinner.mat-info {
+    // @include info-config-color;
+    --mdc-circular-progress-active-indicator-color: #2d9fc5;
+  }
+  .dark-theme .mat-mdc-progress-spinner.mat-info {
+    // @include info-config-color;
+    --mdc-circular-progress-active-indicator-color: #2d9fc5;
+  }
+  .light-theme .mat-mdc-progress-spinner.mat-warning {
+    // @include warning-config-color;
+    --mdc-circular-progress-active-indicator-color: #fb8500;
+  }
+  .dark-theme .mat-mdc-progress-spinner.mat-warning {
+    // @include warning-config-color;
+    --mdc-circular-progress-active-indicator-color: #fb8500;
+  }
+  
+  // MAT PROGRESS BAR EXTRA COLORS / DARK AND LIGHT THEME --PALETTE COLOR USED : 500
+  
+  .light-theme .mat-mdc-progress-bar.mat-success {
+    --mdc-linear-progress-active-indicator-color: #8fc93a;
+  }
+  .dark-theme .mat-mdc-progress-bar.mat-success {
+    --mdc-linear-progress-active-indicator-color: #8fc93a;
+  }
+  .light-theme .mat-mdc-progress-bar.mat-info {
+    --mdc-linear-progress-active-indicator-color:  #2d9fc5;
+  }
+  .dark-theme .mat-mdc-progress-bar.mat-info {
+    --mdc-linear-progress-active-indicator-color:  #2d9fc5;
+  }
+  .light-theme .mat-mdc-progress-bar.mat-warning {
+    --mdc-linear-progress-active-indicator-color: #fb8500;
+  }
+  .dark-theme .mat-mdc-progress-bar.mat-warning {
+    --mdc-linear-progress-active-indicator-color: #fb8500;
+  }
+  
+  // MAT SLIDER EXTRA COLORS / DARK AND LIGHT MODE
+  
+  .light-theme .mat-mdc-slider.mat-success {
+    --mdc-slider-handle-color: #8fc93a;
+    --mdc-slider-focus-handle-color: #8fc93a;
+    --mdc-slider-hover-handle-color: #8fc93a;
+    --mdc-slider-active-track-color: #8fc93a;
+    --mdc-slider-inactive-track-color: #8fc93a;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;
+    --mat-mdc-slider-ripple-color: #8fc93a;
+    --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  .dark-theme .mat-mdc-slider.mat-success {
+    --mdc-slider-handle-color: #8fc93a;
+    --mdc-slider-focus-handle-color: #8fc93a;
+    --mdc-slider-hover-handle-color: #8fc93a;
+    --mdc-slider-active-track-color: #8fc93a;
+    --mdc-slider-inactive-track-color: #8fc93a;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;
+    --mat-mdc-slider-ripple-color: #8fc93a;
+    --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  .light-theme .mat-mdc-slider.mat-info {
+    --mdc-slider-handle-color: #2d9fc5;
+    --mdc-slider-focus-handle-color: #2d9fc5;
+    --mdc-slider-hover-handle-color: #2d9fc5;
+    --mdc-slider-active-track-color: #2d9fc5;
+    --mdc-slider-inactive-track-color: #2d9fc5;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #2d9fc5;
+    --mat-mdc-slider-ripple-color: #2d9fc5;
+    --mat-mdc-slider-hover-ripple-color: #309abd7f;
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  .dark-theme .mat-mdc-slider.mat-info {
+    --mdc-slider-handle-color: #4dadce;
+    --mdc-slider-focus-handle-color: #4dadce;
+    --mdc-slider-hover-handle-color: #4dadce;
+    --mdc-slider-active-track-color: #4dadce;
+    --mdc-slider-inactive-track-color: #4dadce;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;
+    --mat-mdc-slider-ripple-color: #4dadce;
+    --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  .light-theme .mat-mdc-slider.mat-warning {
+    --mdc-slider-handle-color: #fb8500;
+    --mdc-slider-focus-handle-color: #fb8500;
+    --mdc-slider-hover-handle-color: #fb8500;
+    --mdc-slider-active-track-color: #fb8500;
+    --mdc-slider-inactive-track-color: #fb8500;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+    --mat-mdc-slider-ripple-color: #fb8500;
+    --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  .dark-theme .mat-mdc-slider.mat-warning {
+    --mdc-slider-handle-color: #fb8500;
+    --mdc-slider-focus-handle-color: #fb8500;
+    --mdc-slider-hover-handle-color: #fb8500;
+    --mdc-slider-active-track-color: #fb8500;
+    --mdc-slider-inactive-track-color: #fb8500;
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+    --mat-mdc-slider-ripple-color: #fb8500;
+    --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);
+  }
+  // MAT CHECKBOX / MAT RADIO BUTTONS --THESE ONLY CAN BE CHANGED  TO 'PRIMARY' OR 'WARN' COLOR. https://material.angular.io/components/checkbox/overview
+  .light-theme .mat-mdc-radio-button.mat-success{
+    --mdc-radio-selected-focus-icon-color: #8fc93a;
+    --mdc-radio-selected-hover-icon-color: #8fc93a;
+    --mdc-radio-selected-icon-color: #8fc93a;
+    --mdc-radio-selected-pressed-icon-color: #8fc93a;
+    --mat-mdc-radio-checked-ripple-color: #8fc93a;
+  }
+  .dark-theme .mat-mdc-radio-button.mat-success{
+    --mdc-radio-selected-focus-icon-color: #8fc93a;
+    --mdc-radio-selected-hover-icon-color: #8fc93a;
+    --mdc-radio-selected-icon-color: #8fc93a;
+    --mdc-radio-selected-pressed-icon-color: #8fc93a;
+    --mat-mdc-radio-checked-ripple-color: #8fc93a;
+  }
+  .light-theme .mat-mdc-radio-button.mat-info{
+    --mdc-radio-selected-focus-icon-color: #2d9fc5;
+    --mdc-radio-selected-hover-icon-color: #2d9fc5;
+    --mdc-radio-selected-icon-color: #2d9fc5;
+    --mdc-radio-selected-pressed-icon-color: #2d9fc5;
+    --mat-mdc-radio-checked-ripple-color: #2d9fc5;
+  }
+  .dark-theme .mat-mdc-radio-button.mat-info{
+    --mdc-radio-selected-focus-icon-color: #2d9fc5;
+    --mdc-radio-selected-hover-icon-color: #2d9fc5;
+    --mdc-radio-selected-icon-color: #2d9fc5;
+    --mdc-radio-selected-pressed-icon-color: #2d9fc5;
+    --mat-mdc-radio-checked-ripple-color: #2d9fc5;
+  }
+  .light-theme .mat-mdc-radio-button.mat-warning{
+    --mdc-radio-selected-focus-icon-color: #fb8500;
+    --mdc-radio-selected-hover-icon-color: #fb8500;
+    --mdc-radio-selected-icon-color: #fb8500;
+    --mdc-radio-selected-pressed-icon-color: #fb8500;
+    --mat-mdc-radio-checked-ripple-color: #fb8500;
+  }
+  .dark-theme .mat-mdc-radio-button.mat-warning{
+    --mdc-radio-selected-focus-icon-color: #fb8500;
+    --mdc-radio-selected-hover-icon-color: #fb8500;
+    --mdc-radio-selected-icon-color: #fb8500;
+    --mdc-radio-selected-pressed-icon-color: #fb8500;
+    --mat-mdc-radio-checked-ripple-color: #fb8500;
+  }
+  // MAT AUTOCOMPLETE
+  
+  
+  
+  .dark-theme .mdc-text-field--filled:not(.mdc-text-field--disabled), .dark-theme .mat-autocomplete, .dark-theme .mat-mdc-form-field-focus-overlay{
+  
+    background-color: transparent;
+  
+  }
+  
+  // MAT SLIDE TOGGLE EXTRA COLORS / DARK AND LIGHT MODE
+  .light-theme .mat-mdc-slide-toggle.mat-success .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #8fc93a;
+    --mdc-switch-selected-handle-color: #8fc93a;
+    --mdc-switch-selected-hover-state-layer-color: #8fc93a;
+    --mdc-switch-selected-pressed-state-layer-color: #8fc93a;
+    --mdc-switch-selected-focus-handle-color: #8fc93a;
+    --mdc-switch-selected-hover-handle-color: #8fc93a;
+    --mdc-switch-selected-pressed-handle-color: #8fc93a;
+    --mdc-switch-selected-focus-track-color: #8fc93a;
+    --mdc-switch-selected-hover-track-color: #8fc93a;
+    --mdc-switch-selected-pressed-track-color: #8fc93a;
+    --mdc-switch-selected-track-color: #8fc93a;
+  }
+  .dark-theme .mat-mdc-slide-toggle.mat-success .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #8fc93a;
+    --mdc-switch-selected-handle-color: #8fc93a;
+    --mdc-switch-selected-hover-state-layer-color: #8fc93a;
+    --mdc-switch-selected-pressed-state-layer-color: #8fc93a;
+    --mdc-switch-selected-focus-handle-color: #8fc93a;
+    --mdc-switch-selected-hover-handle-color: #8fc93a;
+    --mdc-switch-selected-pressed-handle-color: #8fc93a;
+    --mdc-switch-selected-focus-track-color: #8fc93a;
+    --mdc-switch-selected-hover-track-color: #8fc93a;
+    --mdc-switch-selected-pressed-track-color: #8fc93a;
+    --mdc-switch-selected-track-color: #8fc93a;
+  }
+  .light-theme .mat-mdc-slide-toggle.mat-info .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-handle-color: #2d9fc5;
+    --mdc-switch-selected-hover-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-pressed-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-focus-handle-color: #2d9fc5;
+    --mdc-switch-selected-hover-handle-color: #2d9fc5;
+    --mdc-switch-selected-pressed-handle-color: #2d9fc5;
+    --mdc-switch-selected-focus-track-color: #2d9fc5;
+    --mdc-switch-selected-hover-track-color: #2d9fc5;
+    --mdc-switch-selected-pressed-track-color: #2d9fc5;
+    --mdc-switch-selected-track-color: #2d9fc5;
+  }
+  .dark-theme .mat-mdc-slide-toggle.mat-info .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-handle-color: #2d9fc5;
+    --mdc-switch-selected-hover-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-pressed-state-layer-color: #2d9fc5;
+    --mdc-switch-selected-focus-handle-color: #2d9fc5;
+    --mdc-switch-selected-hover-handle-color: #2d9fc5;
+    --mdc-switch-selected-pressed-handle-color: #2d9fc5;
+    --mdc-switch-selected-focus-track-color: #2d9fc5;
+    --mdc-switch-selected-hover-track-color: #2d9fc5;
+    --mdc-switch-selected-pressed-track-color: #2d9fc5;
+    --mdc-switch-selected-track-color: #2d9fc5;
+  }
+  .light-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #fb8500;
+    --mdc-switch-selected-handle-color: #fb8500;
+    --mdc-switch-selected-hover-state-layer-color: #fb8500;
+    --mdc-switch-selected-pressed-state-layer-color: #fb8500;
+    --mdc-switch-selected-focus-handle-color: #fb8500;
+    --mdc-switch-selected-hover-handle-color: #fb8500;
+    --mdc-switch-selected-pressed-handle-color: #fb8500;
+    --mdc-switch-selected-focus-track-color: #fb8500;
+    --mdc-switch-selected-hover-track-color: #fb8500;
+    --mdc-switch-selected-pressed-track-color: #fb8500;
+    --mdc-switch-selected-track-color: #fb8500;
+  }
+  .dark-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field {
+    --mdc-switch-selected-focus-state-layer-color: #fb8500;
+    --mdc-switch-selected-handle-color: #fb8500;
+    --mdc-switch-selected-hover-state-layer-color: #fb8500;
+    --mdc-switch-selected-pressed-state-layer-color: #fb8500;
+    --mdc-switch-selected-focus-handle-color: #fb8500;
+    --mdc-switch-selected-hover-handle-color: #fb8500;
+    --mdc-switch-selected-pressed-handle-color: #fb8500;
+    --mdc-switch-selected-focus-track-color: #fb8500;
+    --mdc-switch-selected-hover-track-color: #fb8500;
+    --mdc-switch-selected-pressed-track-color: #fb8500;
+    --mdc-switch-selected-track-color: #fb8500;
+  }
+  
