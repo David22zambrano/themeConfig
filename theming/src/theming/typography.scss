@@ -1,8 +1,6 @@
 @use "@angular/material" as mat ;
 @use "sass:map";
 
-$text-tranform:"uppercase";
-
 $h3: mat.define-typography-level(
   $font-size: 48px,
   $font-weight: 500,
