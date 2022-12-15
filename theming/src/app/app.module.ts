@@ -24,6 +24,8 @@ import { MatSliderComponent } from './components/mat-slider/mat-slider.component
 import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
 import { SizeDirective } from './directivas/size.directive';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -52,7 +54,8 @@ import {MatDividerModule} from '@angular/material/divider';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]
