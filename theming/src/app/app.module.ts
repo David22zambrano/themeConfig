@@ -6,7 +6,6 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { MatAutocompleteComponent } from './components/mat-autocomplete/mat-autocomplete.component';
@@ -27,7 +26,6 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
     CheckboxComponent,
     MatAutocompleteComponent,
     MatInputComponent,
@@ -52,4 +50,5 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
