@@ -1,0 +1,1491 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-e24f74b03bda37f4dd4873bb71398880fe57017672cfca1a191c07ce9e555974da89c539de52884756870745352b44dfb557b0ff537cc8b546c5ef3756e0de92",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<app-toolbar></app-toolbar>\r\n<!-- <app-mat-stepper></app-mat-stepper> -->\r\n<app-mat-buttons></app-mat-buttons>\r\n<app-mat-bagde></app-mat-bagde>\r\n<app-checkbox></app-checkbox>\r\n<app-mat-chips></app-mat-chips>\r\n<app-mat-radio-buttons></app-mat-radio-buttons>\r\n<br>\r\n<app-mat-input></app-mat-input>\r\n<app-mat-spinner></app-mat-spinner>\r\n<app-mat-autocomplete></app-mat-autocomplete>\r\n<app-mat-progress-bar></app-mat-progress-bar>\r\n<app-mat-slider></app-mat-slider>\r\n<app-mat-slide-toggle></app-mat-slide-toggle>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-82dea6bef9ecfb2c47df267dabe701b98b919153bf8802ad5cffb557c8125f507362b4753e18357a5952719a3725e45cfe66c9fdfc0f0610ab185a0d0024da4b",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 751,
+                            "end": 765,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 752,
+                                "end": 760,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 41,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 33,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 47,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n  \r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 49
+                    }
+                }
+            }
+        },
+        {
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-ba2b7c752b99cef01dc534769b150f3970a4eebe93166fab80e9724a7ba97f2c4f95ec1ef13bf518c0f56814c2f73a1c9a8a3622ddefec3b7a027cb5e8e03a86",
+            "file": "src/app/components/checkbox/checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-checkbox",
+            "styleUrls": [
+                "./checkbox.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "checked",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "indeterminate",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "labelPosition",
+                    "defaultValue": "'after'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"before\" | \"after\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-checkbox',\r\n  templateUrl: './checkbox.component.html',\r\n  styleUrls: ['./checkbox.component.scss']\r\n})\r\nexport class CheckboxComponent {\r\n  checked = false;\r\n  indeterminate = false;\r\n  labelPosition: 'before' | 'after' = 'after';\r\n  disabled = false;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n  .example-h2 {\r\n    margin: 10px;\r\n  }\r\n  \r\n  .example-section {\r\n    display: flex;\r\n    align-content: center;\r\n    align-items: center;\r\n    height: 60px;\r\n  }\r\n  \r\n  .example-margin {\r\n    margin: 0 10px;\r\n  }",
+                    "styleUrl": "./checkbox.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-checkbox\r\nclass=\"example-margin\"\r\n  (ngModel)=\"(checked)\"\r\n  [(indeterminate)]=\"indeterminate\"\r\n  [labelPosition]=\"labelPosition\"\r\n  [disabled]=\"disabled\"\r\n>\r\n  I'm a checkbox\r\n</mat-checkbox>\r\n\r\n\r\n"
+        },
+        {
+            "name": "MatAutocompleteComponent",
+            "id": "component-MatAutocompleteComponent-84930f1a0128097946319a8b7fd9ae3264edaabfb61ac035af0a4cc0b6587300e749107ec56964b38e0523a047d2559057daa67df0fc1b801ed2b0a04c40f0f4",
+            "file": "src/app/components/mat-autocomplete/mat-autocomplete.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-autocomplete",
+            "styleUrls": [
+                "./mat-autocomplete.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-autocomplete.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredOptions",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<string[]> | any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "myControl",
+                    "defaultValue": "new FormControl('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "['One', 'Two', 'Three']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "_filter",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string[]",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\r\nimport {FormControl} from '@angular/forms';\r\nimport {Observable} from 'rxjs';\r\nimport {map, startWith} from 'rxjs/operators';\r\n\r\n@Component({\r\n  selector: 'app-mat-autocomplete',\r\n  templateUrl: './mat-autocomplete.component.html',\r\n  styleUrls: ['./mat-autocomplete.component.scss']\r\n})\r\nexport class MatAutocompleteComponent implements OnInit{\r\n  myControl = new FormControl('');\r\n  options: string[] = ['One', 'Two', 'Three'];\r\n  filteredOptions: Observable<string[]> | any;\r\n\r\n  ngOnInit() {\r\n    this.filteredOptions = this.myControl.valueChanges.pipe(\r\n      startWith(''),\r\n      map(value => this._filter(value || '')),\r\n    );\r\n  }\r\n\r\n  private _filter(value: string): string[] {\r\n    const filterValue = value.toLowerCase();\r\n\r\n    return this.options.filter(option => option.toLowerCase().includes(filterValue));\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".example-form {\r\n    min-width: 150px;\r\n    max-width: 500px;\r\n    width: 100%;\r\n\r\n  }\r\n  \r\n  .example-full-width {\r\n    width: 100%;\r\n  }  ",
+                    "styleUrl": "./mat-autocomplete.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form class=\"example-form\">\r\n    <mat-form-field class=\"example-full-width\" appearance=\"fill\" >\r\n      <mat-label>Hi</mat-label>\r\n      <input type=\"text\"\r\n      \r\n             placeholder=\"Pick one\"\r\n            \r\n             matInput\r\n             formControl=\"myControl\"\r\n             [matAutocomplete]=\"auto\">\r\n      <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\" >\r\n        <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n          {{option}}\r\n        </mat-option>\r\n      </mat-autocomplete>\r\n    </mat-form-field>\r\n  </form>"
+        },
+        {
+            "name": "MatBagdeComponent",
+            "id": "component-MatBagdeComponent-fc490305514142e6391dff3948dc83abc2298c2e4a53862adc78604809c6c1374605e7930c0a89593d2dbee06cba432f96d47eae57de3cb7fdcc820c42e9432f",
+            "file": "src/app/components/mat-bagde/mat-bagde.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-bagde",
+            "styleUrls": [
+                "./mat-bagde.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-bagde.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-bagde',\r\n  templateUrl: './mat-bagde.component.html',\r\n  styleUrls: ['./mat-bagde.component.scss']\r\n})\r\nexport class MatBagdeComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-bagde.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"demo-section\">\r\n    Button with a badge on the left\r\n    <button\r\n      mat-raised-button\r\n      color=\"success\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Success\r\n    </button>\r\n  </div>\r\n  <div class=\"demo-section\">\r\n    Button with a badge on the left\r\n    <button\r\n      mat-raised-button\r\n      color=\"info\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Info\r\n    </button>\r\n  </div>\r\n  <div class=\"demo-section\">\r\n    Button with a badge on the left \r\n    <button\r\n      mat-raised-button\r\n      color=\"warning\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Warning\r\n    </button>\r\n  </div>\r\n  <div class=\"demo-section\">\r\n    Button with a badge on the left\r\n    <button\r\n      mat-raised-button\r\n      color=\"primary\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Primary\r\n    </button>\r\n  </div>\r\n  <div class=\"demo-section\">\r\n    Button with a badge on the left\r\n    <button\r\n      mat-raised-button\r\n      color=\"accent\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Accent\r\n    </button>\r\n  </div>\r\n  <div class=\"demo-section\">\r\n    Button with a badge on the left\r\n    <button\r\n      mat-raised-button\r\n      color=\"warn\"\r\n      matBadge=\"8\"\r\n      matBadgePosition=\"before\"\r\n      matBadgeColor=\"warn\"\r\n    >\r\n      Action\r\n    </button>\r\n  </div>\r\n  "
+        },
+        {
+            "name": "MatButtonsComponent",
+            "id": "component-MatButtonsComponent-da32649cf568a42cc46bac9d2130a22f01bf8b9401e9fd4b4bfcdfd756b20c2def7ed11fa503c4ff18dd509540adca1e90025f6c26089cdba1c243d73ea547aa",
+            "file": "src/app/components/mat-buttons/mat-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-buttons",
+            "styleUrls": [
+                "./mat-buttons.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-buttons.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-buttons',\r\n  templateUrl: './mat-buttons.component.html',\r\n  styleUrls: ['./mat-buttons.component.scss']\r\n})\r\nexport class MatButtonsComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\r\n    display: table;\r\n  }\r\n  \r\n  .example-label {\r\n    display: table-cell;\r\n    font-size: 14px;\r\n    margin-left: 8px;\r\n    min-width: 120px;\r\n  }\r\n  \r\n  .example-button-row {\r\n    display: table-cell;\r\n    max-width: 600px;\r\n  }\r\n  \r\n  .example-button-row .mat-mdc-button-base {\r\n    margin: 8px 8px 8px 0;\r\n  }\r\n  \r\n  .example-flex-container {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex-wrap: wrap;\r\n  }\r\n  \r\n  .example-button-container {\r\n    display: flex;\r\n    justify-content: center;\r\n    width: 120px;\r\n  }",
+                    "styleUrl": "./mat-buttons.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section>\r\n    <div class=\"example-label\">Basic</div>\r\n    <div class=\"example-button-row\">\r\n      <button mat-button color=\"success\">Success</button>\r\n      <button mat-button color=\"warning\">Warning</button>\r\n      <button mat-button color=\"info\">Info</button>\r\n      <button mat-button color=\"primary\">Primary</button>\r\n      <button mat-button color=\"accent\">Accent</button>\r\n      <button mat-button color=\"warn\">Warn</button>\r\n      <button mat-button disabled>Disabled</button>\r\n      <a mat-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">Raised</div>\r\n    <div class=\"example-button-row\">\r\n      <button mat-raised-button>Basic</button>\r\n      <button mat-raised-button color=\"success\">Success</button>\r\n      <button mat-raised-button color=\"warning\">Warning</button>\r\n      <button mat-raised-button color=\"info\">Info</button>\r\n      <button mat-raised-button color=\"primary\">Primary</button>\r\n      <button mat-raised-button color=\"accent\">Accent</button>\r\n      <button mat-raised-button color=\"warn\">Warn</button>\r\n      <button mat-raised-button disabled>Disabled</button>\r\n      <a mat-raised-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">Stroked</div>\r\n    <div class=\"example-button-row\">\r\n      <button mat-stroked-button color=\"success\">success</button>\r\n      <button mat-stroked-button color=\"warning\">Warning</button>\r\n      <button mat-stroked-button color=\"info\">Info</button>\r\n      <button mat-stroked-button color=\"primary\">Primary</button>\r\n      <button mat-stroked-button color=\"accent\">Accent</button>\r\n      <button mat-stroked-button color=\"warn\">Warn</button>\r\n      <button mat-stroked-button disabled>Disabled</button>\r\n      <a mat-stroked-button href=\"https://www.google.com/\" target=\"_blank\"\r\n        >Link</a\r\n      >\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">Flat</div>\r\n    <div class=\"example-button-row\">\r\n      <button mat-flat-button color=\"success\">success</button>\r\n      <button mat-flat-button color=\"info\">Info</button>\r\n      <button mat-flat-button color=\"warning\">Warning</button>\r\n      <button mat-flat-button color=\"primary\">Accent</button>\r\n      <button mat-flat-button color=\"accent\">Accent</button>\r\n      <button mat-flat-button color=\"warn\">Warn</button>\r\n      <button mat-flat-button disabled>Disabled</button>\r\n      <a mat-flat-button href=\"https://www.google.com/\" target=\"_blank\">Link</a>\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">Icon</div>\r\n    <div class=\"example-button-row\">\r\n      <div class=\"example-flex-container\">\r\n        <button\r\n          mat-icon-button\r\n          color=\"success\"\r\n          aria-label=\"Example icon button with a vertical three dot icon\"\r\n        >\r\n          <mat-icon>home</mat-icon>\r\n        </button>\r\n        <button\r\n          mat-icon-button\r\n          color=\"info\"\r\n          aria-label=\"Example icon button with a home icon\"\r\n        >\r\n          <mat-icon>home</mat-icon>\r\n        </button>\r\n        <button\r\n        mat-icon-button\r\n        color=\"warning\"\r\n        aria-label=\"Example icon button with a home icon\"\r\n      >\r\n        <mat-icon>home</mat-icon>\r\n      </button>\r\n        <button\r\n          mat-icon-button\r\n          color=\"primary\"\r\n          aria-label=\"Example icon button with a menu icon\"\r\n        >\r\n          <mat-icon >favorite</mat-icon>\r\n        </button>\r\n        <button\r\n          mat-icon-button\r\n          color=\"accent\"\r\n          aria-label=\"Example icon button with a heart icon\"\r\n        >\r\n          <mat-icon >favorite</mat-icon>\r\n        </button>\r\n        <button\r\n          mat-icon-button\r\n          color=\"warn\"\r\n          aria-label=\"Example icon button with a open in new tab icon\"\r\n        >\r\n          <mat-icon>favorite</mat-icon>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">FAB</div>\r\n    <div class=\"example-button-row\">\r\n      <div class=\"example-flex-container\">\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"success\"\r\n            aria-label=\"Example icon button with a delete icon\"\r\n          >\r\n            <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"info\"\r\n            aria-label=\"Example icon button with a delete icon\"\r\n          >\r\n            <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"warning\"\r\n            aria-label=\"Example icon button with a delete icon\"\r\n          >\r\n            <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"primary\"\r\n            aria-label=\"Example icon button with a delete icon\"\r\n          >\r\n            <mat-icon>delete</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"accent\"\r\n            aria-label=\"Example icon button with a bookmark icon\"\r\n          >\r\n            <mat-icon>bookmark</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            color=\"warn\"\r\n            aria-label=\"Example icon button with a home icon\"\r\n          >\r\n            <mat-icon>home</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-fab\r\n            disabled\r\n            aria-label=\"Example icon button with a heart icon\"\r\n          >\r\n            <mat-icon>favorite</mat-icon>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </section>\r\n  <section>\r\n    <div class=\"example-label\">Mini FAB</div>\r\n    <div class=\"example-button-row\">\r\n      <div class=\"example-flex-container\">\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"success\"\r\n            aria-label=\"Example icon button with a menu icon\"\r\n          >\r\n            <mat-icon>menu</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"info\"\r\n            aria-label=\"Example icon button with a menu icon\"\r\n          >\r\n            <mat-icon>menu</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"warning\"\r\n            aria-label=\"Example icon button with a menu icon\"\r\n          >\r\n            <mat-icon>menu</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"primary\"\r\n            aria-label=\"Example icon button with a menu icon\"\r\n          >\r\n            <mat-icon>menu</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"accent\"\r\n            aria-label=\"Example icon button with a plus one icon\"\r\n          >\r\n            <mat-icon>plus_one</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            color=\"warn\"\r\n            aria-label=\"Example icon button with a filter list icon\"\r\n          >\r\n            <mat-icon>filter_list</mat-icon>\r\n          </button>\r\n        </div>\r\n        <div class=\"example-button-container\">\r\n          <button\r\n            mat-mini-fab\r\n            disabled\r\n            aria-label=\"Example icon button with a home icon\"\r\n          >\r\n            <mat-icon>home</mat-icon>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </section>"
+        },
+        {
+            "name": "MatChipsComponent",
+            "id": "component-MatChipsComponent-63a0c123b18ee804476b131a4f5f784bb7cff0ecd9eff58931c4c7bc9ad6b1af2767e894209f02ca981303d6baf9280e7bf7949fd987e16c7a06a7e69b2d1e2c",
+            "file": "src/app/components/mat-chips/mat-chips.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-chips",
+            "styleUrls": [
+                "./mat-chips.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-chips.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n  styleUrls: ['./mat-chips.component.scss']\r\n})\r\nexport class MatChipsComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-chips.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-chip-listbox aria-label=\"Fish selection\">\r\n    <mat-chip-option color=\"success\">Success</mat-chip-option>\r\n    <mat-chip-option color=\"info\">Info</mat-chip-option>\r\n    <mat-chip-option color=\"warning\">Warning</mat-chip-option>\r\n    <mat-chip-option color=\"primary\">primary</mat-chip-option>\r\n    <mat-chip-option color=\"accent\" selected>Accent</mat-chip-option>\r\n    <mat-chip-option color=\"warn\" >\r\n      <img\r\n        matChipAvatar\r\n        src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\"\r\n        alt=\"Photo of a Shiba Inu\"\r\n      />\r\n      Dog one\r\n    </mat-chip-option>\r\n  </mat-chip-listbox>"
+        },
+        {
+            "name": "MatDataPickerComponent",
+            "id": "component-MatDataPickerComponent-80b780a3770e25bab7f7407b64f54073dd8b3fc43957197f7023f16b112906a07dfd42b26026ed102999eafb4d92815742e6c05476c02fd2701f8825b05334ef",
+            "file": "src/app/components/mat-data-picker/mat-data-picker.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-data-picker",
+            "styleUrls": [
+                "./mat-data-picker.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-data-picker.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-data-picker',\r\n  templateUrl: './mat-data-picker.component.html',\r\n  styleUrls: ['./mat-data-picker.component.scss']\r\n})\r\nexport class MatDataPickerComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-data-picker.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-form-field appearance=\"fill\">\r\n    <mat-label>Enter a date range</mat-label>\r\n    <mat-date-range-input [rangePicker]=\"picker\">\r\n      <input matStartDate placeholder=\"Start date\">\r\n      <input matEndDate placeholder=\"End date\">\r\n    </mat-date-range-input>\r\n    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>\r\n    <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n    <mat-date-range-picker #picker></mat-date-range-picker>\r\n  </mat-form-field>"
+        },
+        {
+            "name": "MatInputComponent",
+            "id": "component-MatInputComponent-84abbf14e2fb58017851a2e524e768fe63041fe2ed7255d18f374e7ad87ba8486c3df383dd47e2ff6dc4e3c2c40e6b1fe7b8da5b808e14a101744e9c145f37b5",
+            "file": "src/app/components/mat-input/mat-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-input",
+            "styleUrls": [
+                "./mat-input.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\r\nimport {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';\r\nimport { ErrorStateMatcher, ThemePalette } from '@angular/material/core';\r\n\r\n// export declare type ThemePalette = 'primary' | 'accent' | 'success' | undefined;\r\n@Component({\r\n  selector: 'app-mat-input',\r\n  templateUrl: './mat-input.component.html',\r\n  styleUrls: ['./mat-input.component.scss']\r\n})\r\nexport class MatInputComponent {\r\n  \r\n  // color:ThemePalette\r\n\r\n  // mostrarColor(){\r\n  //   console.log(this.color?.prim)\r\n  // }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".example-form {\r\n    min-width: 150px;\r\n    max-width: 500px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .example-full-width {\r\n    width: 100%;\r\n  }",
+                    "styleUrl": "./mat-input.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-form-field class=\"example-full-width\" >\r\n  <mat-label>Favorite food</mat-label>\r\n  <input matInput placeholder=\"Ex. Pizza\" value=\"Sushi\">\r\n</mat-form-field>\r\n"
+        },
+        {
+            "name": "MatProgressBarComponent",
+            "id": "component-MatProgressBarComponent-23d091b2de9ca51914a043b404e7f8ecc5c8b6e21e2be5d5dd3b355bfddfef8dee76b73f86a4cb3903e8b133522cfb1b54eae31116aab4a4427b3f5bce8a91fb",
+            "file": "src/app/components/mat-progress-bar/mat-progress-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-progress-bar",
+            "styleUrls": [
+                "./mat-progress-bar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-progress-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-progress-bar',\r\n  templateUrl: './mat-progress-bar.component.html',\r\n  styleUrls: ['./mat-progress-bar.component.scss']\r\n})\r\nexport class MatProgressBarComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".progress-bar-container{\r\n display: flex;\r\n flex-direction: column;\r\n\r\n}",
+                    "styleUrl": "./mat-progress-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section class=\"progress-bar-container\">\r\n  <mat-progress-bar  color=\"success\" mode=\"indeterminate\"></mat-progress-bar>\r\n  <mat-progress-bar color=\"info\" mode=\"indeterminate\"></mat-progress-bar>\r\n  <mat-progress-bar color=\"warning\" mode=\"indeterminate\"></mat-progress-bar>\r\n  <mat-progress-bar color=\"primary\" mode=\"indeterminate\"></mat-progress-bar>\r\n  <mat-progress-bar color=\"accent\" mode=\"indeterminate\"></mat-progress-bar>\r\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\"></mat-progress-bar>\r\n</section>\r\n"
+        },
+        {
+            "name": "MatRadioButtonsComponent",
+            "id": "component-MatRadioButtonsComponent-29d19b64fb779482d2035c789b5beb2ec64d1f006f6dfe22878140cc059ed36e1dd0b46c176d0f48ea2ccba3725f157e93fc601dc18a147d0f347f2c920691bd",
+            "file": "src/app/components/mat-radio-buttons/mat-radio-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-radio-buttons",
+            "styleUrls": [
+                "./mat-radio-buttons.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-radio-buttons.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "MAT_RADIO_DEFAULT_OPTIONS",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule } from '@angular/material/radio';\r\n\r\n@Component({\r\n  selector: 'app-mat-radio-buttons',\r\n  templateUrl: './mat-radio-buttons.component.html',\r\n  styleUrls: ['./mat-radio-buttons.component.scss'],\r\n\r\n})\r\n\r\n\r\nexport class MatRadioButtonsComponent {\r\n  MAT_RADIO_DEFAULT_OPTIONS: any\r\n  \r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-radio-buttons.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-radio-group aria-label=\"Select an option\">\r\n    <mat-radio-button value=\"1\" >Option 1</mat-radio-button>\r\n    <mat-radio-button value=\"2\" color=\"accent\">Option 2</mat-radio-button>\r\n    <mat-radio-button value=\"2\" color=\"warn\">Option 2</mat-radio-button>\r\n  </mat-radio-group>"
+        },
+        {
+            "name": "MatSliderComponent",
+            "id": "component-MatSliderComponent-c11399d4c67d4ebca2a2081bbd0d760a040844ee7a9f1a6d039b6b00ed673142e5169e9f4e8694b0f81b419899ec70e8d5509e6ae4e14ae25a51f1a808463b6d",
+            "file": "src/app/components/mat-slider/mat-slider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-slider",
+            "styleUrls": [
+                "./mat-slider.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-slider.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-slider',\r\n  templateUrl: './mat-slider.component.html',\r\n  styleUrls: ['./mat-slider.component.scss']\r\n})\r\nexport class MatSliderComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "mat-slider {\r\n    width: 300px;\r\n  }",
+                    "styleUrl": "./mat-slider.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-slider color=\"success\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n  <mat-slider color=\"info\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n  <mat-slider color=\"warning\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n  <mat-slider color=\"primary\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n  <mat-slider color=\"accent\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n  <mat-slider color=\"warn\">\r\n    <input matSliderThumb>\r\n  </mat-slider>"
+        },
+        {
+            "name": "MatSlideToggleComponent",
+            "id": "component-MatSlideToggleComponent-eb5432596717f249396878d3d0d9e1e7b3acd2e5c407a90f21b74b891fce68cdc29f8c09a0c4c6de6816b03153d79980f12b4ec78c689553884c203a8f73aca1",
+            "file": "src/app/components/mat-slide-toggle/mat-slide-toggle.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-slide-toggle",
+            "styleUrls": [
+                "./mat-slide-toggle.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-slide-toggle.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-slide-toggle',\r\n  templateUrl: './mat-slide-toggle.component.html',\r\n  styleUrls: ['./mat-slide-toggle.component.scss']\r\n})\r\nexport class MatSlideToggleComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-slide-toggle.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-slide-toggle color=\"success\">Slide me!</mat-slide-toggle>\r\n<mat-slide-toggle color=\"info\">Slide me!</mat-slide-toggle>\r\n<mat-slide-toggle color=\"warning\">Slide me!</mat-slide-toggle>\r\n<mat-slide-toggle color=\"primary\">Slide me!</mat-slide-toggle>\r\n<mat-slide-toggle color=\"accent\">Slide me!</mat-slide-toggle>\r\n<mat-slide-toggle color=\"warn\">Slide me!</mat-slide-toggle>\r\n"
+        },
+        {
+            "name": "MatSpinnerComponent",
+            "id": "component-MatSpinnerComponent-4b050c2fe1f53c6284cfc5d5def4816a5aa7845eccfee39b1bcec1a64700432d370dd496e1d0f61815c0bb53dcde544ac2c6aa40b45e377bfba6652591a976c6",
+            "file": "src/app/components/mat-spinner/mat-spinner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-spinner",
+            "styleUrls": [
+                "./mat-spinner.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-spinner.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-spinner',\r\n  templateUrl: './mat-spinner.component.html',\r\n  styleUrls: ['./mat-spinner.component.scss']\r\n})\r\nexport class MatSpinnerComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container-spinners{\r\n    display:  flex;\r\n    \r\n}",
+                    "styleUrl": "./mat-spinner.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section class=\"container-spinners\">\r\n    <mat-spinner color=\"success\"></mat-spinner>\r\n    <mat-spinner color=\"info\"></mat-spinner>\r\n    <mat-spinner color=\"warning\"></mat-spinner>\r\n    <mat-spinner color=\"primary\"></mat-spinner>\r\n    <mat-spinner color=\"accent\"></mat-spinner>\r\n    <mat-spinner color=\"warn\"></mat-spinner>\r\n</section>\r\n\r\n"
+        },
+        {
+            "name": "MatStepperComponent",
+            "id": "component-MatStepperComponent-2d09ef809a892aa33f1b547b6b9ebf2d5eff16de726dd83117d39613ea6979f7a22730d749df9aa98e527a6f6253497445c24aa995307426a94efd8bb9bca9b1",
+            "file": "src/app/components/mat-stepper/mat-stepper.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true },\n}"
+                }
+            ],
+            "selector": "app-mat-stepper",
+            "styleUrls": [
+                "./mat-stepper.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-stepper.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "firstFormGroup",
+                    "defaultValue": "this._formBuilder.group({\r\n    firstCtrl: ['', Validators.required],\r\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "secondFormGroup",
+                    "defaultValue": "this._formBuilder.group({\r\n    secondCtrl: ['', Validators.required],\r\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {FormBuilder, Validators} from '@angular/forms';\r\nimport {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';\r\n\r\n@Component({\r\n  selector: 'app-mat-stepper',\r\n  templateUrl: './mat-stepper.component.html',\r\n  styleUrls: ['./mat-stepper.component.scss'],\r\n  providers: [\r\n    {\r\n      provide: STEPPER_GLOBAL_OPTIONS,\r\n      useValue: {showError: true},\r\n    },\r\n  ],\r\n})\r\nexport class MatStepperComponent {\r\n  firstFormGroup = this._formBuilder.group({\r\n    firstCtrl: ['', Validators.required],\r\n  });\r\n  secondFormGroup = this._formBuilder.group({\r\n    secondCtrl: ['', Validators.required],\r\n  });\r\n  constructor(private _formBuilder: FormBuilder) {}\r\n}\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-stepper.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 22,
+                "jsdoctags": [
+                    {
+                        "name": "_formBuilder",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<mat-stepper #stepper>\r\n    <mat-step [stepControl]=\"firstFormGroup\" errorMessage=\"Name is required.\">\r\n      <form formGroup=\"firstFormGroup\">\r\n        <ng-template matStepLabel>Fill out your name</ng-template>\r\n        <mat-form-field appearance=\"fill\">\r\n          <mat-label>Name</mat-label>\r\n          <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\r\n        </mat-form-field>\r\n        <div>\r\n          <p>Go to a different step to see the error state</p>\r\n          <button mat-button matStepperNext>Next</button>\r\n        </div>\r\n      </form>\r\n    </mat-step>\r\n    <mat-step [stepControl]=\"secondFormGroup\" errorMessage=\"Address is required.\">\r\n      <form formGroup=\"secondFormGroup\">\r\n        <ng-template matStepLabel>Fill out your address</ng-template>\r\n        <mat-form-field appearance=\"fill\">\r\n          <mat-label>Address</mat-label>\r\n          <input matInput placeholder=\"Ex. 1 Main St, New York, NY\" formControlName=\"secondCtrl\"\r\n                 required>\r\n        </mat-form-field>\r\n        <div>\r\n          <p>Go to a different step to see the error state</p>\r\n          <button mat-button matStepperPrevious>Back</button>\r\n          <button mat-button matStepperNext>Next</button>\r\n        </div>\r\n      </form>\r\n    </mat-step>\r\n    <mat-step>\r\n      <ng-template matStepLabel>Done</ng-template>\r\n      <p>You are now done.</p>\r\n      <div>\r\n        <button mat-button matStepperPrevious>Back</button>\r\n        <button mat-button (click)=\"stepper.reset()\">Reset</button>\r\n      </div>\r\n    </mat-step>\r\n  </mat-stepper>"
+        },
+        {
+            "name": "MatTabsComponent",
+            "id": "component-MatTabsComponent-26baf5a87fc367799933fcdf3905b303ab347d11dbe22af361aba85dfa5f48ce2d4ed3e15bc26d08d9f71ffba73e52f0d2c3b61dd9bf302f1be43c141ea739bb",
+            "file": "src/app/components/mat-tabs/mat-tabs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-tabs",
+            "styleUrls": [
+                "./mat-tabs.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-tabs.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-tabs',\r\n  templateUrl: './mat-tabs.component.html',\r\n  styleUrls: ['./mat-tabs.component.scss']\r\n})\r\nexport class MatTabsComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-tabs.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>mat-tabs works!</p>\r\n"
+        },
+        {
+            "name": "ToolbarComponent",
+            "id": "component-ToolbarComponent-7e2d3de34d1994388ffcac3e8d865cb1c1e51a534a354a47d8d96b577f7e4fd12727eb27bcc65a407d596abf1a17966b501aaa5d48b78bc2baf3cfae11d18d82",
+            "file": "src/app/components/toolbar/toolbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-toolbar",
+            "styleUrls": [
+                "./toolbar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./toolbar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-toolbar',\r\n  templateUrl: './toolbar.component.html',\r\n  styleUrls: ['./toolbar.component.scss']\r\n})\r\nexport class ToolbarComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".example-spacer {\r\n    flex: 1 1 auto;\r\n  }",
+                    "styleUrl": "./toolbar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-toolbar color=\"primary\" >\r\n    <button mat-icon-button class=\"example-icon\" aria-label=\"icon-button with menu icon\">\r\n      <mat-icon>menu</mat-icon>\r\n    </button>\r\n    <span>My App</span>\r\n    <span class=\"example-spacer\"></span>\r\n    <button mat-icon-button class=\"example-icon favorite-icon\" aria-label=\"icon-button with heart icon\">\r\n      <mat-icon>favorite</mat-icon>\r\n    </button>\r\n    <button mat-icon-button class=\"example-icon\" aria-label=\"Example icon-button with share icon\">\r\n      <mat-icon>share</mat-icon>\r\n    </button>\r\n  </mat-toolbar>\r\n\r\n\r\n\r\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-0955721406e799cf4d7f6524c06fe6d81731f17161b3e949d93e101b051b5cc00dcf93e68c30aedea166d64fe81a937b311f113e8e35a8c27f588a58209dcc42",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { MaterialModule } from './material.module';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ToolbarComponent } from './components/toolbar/toolbar.component';\r\nimport {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';\r\nimport { CheckboxComponent } from './components/checkbox/checkbox.component';\r\nimport { MatAutocompleteComponent } from './components/mat-autocomplete/mat-autocomplete.component';\r\nimport { MatInputComponent } from './components/mat-input/mat-input.component';\r\nimport { MatButtonsComponent } from './components/mat-buttons/mat-buttons.component';\r\nimport { MatSpinnerComponent } from './components/mat-spinner/mat-spinner.component';\r\nimport { MatBagdeComponent } from './components/mat-bagde/mat-bagde.component';\r\nimport { MatProgressBarComponent } from './components/mat-progress-bar/mat-progress-bar.component';\r\nimport { MatRadioButtonsComponent } from './components/mat-radio-buttons/mat-radio-buttons.component';\r\nimport { MatChipsComponent } from './components/mat-chips/mat-chips.component';\r\nimport { MatDataPickerComponent } from './components/mat-data-picker/mat-data-picker.component';\r\nimport { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';\r\nimport { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';\r\nimport { MatSliderComponent } from './components/mat-slider/mat-slider.component';\r\nimport { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ToolbarComponent,\r\n    CheckboxComponent,\r\n    MatAutocompleteComponent,\r\n    MatInputComponent,\r\n    MatButtonsComponent,\r\n    MatSpinnerComponent,\r\n    MatBagdeComponent,\r\n    MatProgressBarComponent,\r\n    MatRadioButtonsComponent,\r\n    MatChipsComponent,\r\n    MatDataPickerComponent,\r\n    MatStepperComponent,\r\n    MatTabsComponent,\r\n    MatSliderComponent,\r\n    MatSlideToggleComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MaterialModule,\r\n  ],\r\n  providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "CheckboxComponent"
+                        },
+                        {
+                            "name": "MatAutocompleteComponent"
+                        },
+                        {
+                            "name": "MatBagdeComponent"
+                        },
+                        {
+                            "name": "MatButtonsComponent"
+                        },
+                        {
+                            "name": "MatChipsComponent"
+                        },
+                        {
+                            "name": "MatDataPickerComponent"
+                        },
+                        {
+                            "name": "MatInputComponent"
+                        },
+                        {
+                            "name": "MatProgressBarComponent"
+                        },
+                        {
+                            "name": "MatRadioButtonsComponent"
+                        },
+                        {
+                            "name": "MatSlideToggleComponent"
+                        },
+                        {
+                            "name": "MatSliderComponent"
+                        },
+                        {
+                            "name": "MatSpinnerComponent"
+                        },
+                        {
+                            "name": "MatStepperComponent"
+                        },
+                        {
+                            "name": "MatTabsComponent"
+                        },
+                        {
+                            "name": "ToolbarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "MaterialModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MaterialModule",
+            "id": "module-MaterialModule-9087fc5144829ccd18c4ea77d7e2d998b3317e50e49db2f99bffd04183a7d0f80c373ddcb34afed68507db99b141f85e4f01151b4d20b04dd314a3959dabcc19",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/material.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport { MatIconModule                  } from '@angular/material/icon';\r\nimport { MatToolbarModule               } from '@angular/material/toolbar';\r\nimport { MatButtonModule                } from '@angular/material/button';\r\nimport { MatBadgeModule                 } from '@angular/material/badge';\r\nimport { MatCheckboxModule              } from '@angular/material/checkbox';\r\nimport { MatRadioModule                 } from '@angular/material/radio';\r\nimport { MatChipsModule                 } from '@angular/material/chips';\r\nimport { MatAutocompleteModule          } from '@angular/material/autocomplete';\r\nimport { MatFormFieldModule             } from '@angular/material/form-field';\r\nimport { MatInputModule                 } from '@angular/material/input';\r\nimport { MatProgressSpinnerModule       } from '@angular/material/progress-spinner';\r\nimport { MatProgressBarModule           } from '@angular/material/progress-bar';\r\nimport { MatDatepickerModule            } from '@angular/material/datepicker';\r\nimport { MatStepperModule               } from '@angular/material/stepper';\r\nimport { MatTabsModule                  } from '@angular/material/tabs';\r\nimport { MatSliderModule                } from '@angular/material/slider';\r\nimport { MatSlideToggleModule           } from '@angular/material/slide-toggle';\r\n\r\nconst component = [\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatToolbarModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    component\r\n  ],\r\n  exports: [\r\n    component\r\n  ],\r\n})\r\nexport class MaterialModule { }",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "component",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/material.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatToolbarModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule\r\n]"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/material.module.ts": [
+                {
+                    "name": "component",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatToolbarModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule\r\n]"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 3,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/checkbox/checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-autocomplete/mat-autocomplete.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatAutocompleteComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-bagde/mat-bagde.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatBagdeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-buttons/mat-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-chips/mat-chips.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatChipsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-data-picker/mat-data-picker.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatDataPickerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-input/mat-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-progress-bar/mat-progress-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatProgressBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-radio-buttons/mat-radio-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatRadioButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-slide-toggle/mat-slide-toggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSlideToggleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-slider/mat-slider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSliderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-spinner/mat-spinner.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSpinnerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-stepper/mat-stepper.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatStepperComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-tabs/mat-tabs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatTabsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/toolbar/toolbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ToolbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "component",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            }
+        ]
+    }
+}

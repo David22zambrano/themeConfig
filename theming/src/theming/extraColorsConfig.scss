@@ -59,8 +59,7 @@ $_ripple-opacity: 0.1;
   .mat-mdc-fab,
   .mat-mdc-mini-fab,
   .mat-badge.mat-badge,
-  .mat-mdc-standard-chip.mat-mdc-chip-selected
-  {
+  .mat-mdc-standard-chip.mat-mdc-chip-selected {
     @include _theme-property($config, "color", default-contrast, $variants);
     @include _theme-property($config, "background-color", default, $variants);
     @include _ripple-color(
@@ -70,5 +69,4 @@ $_ripple-opacity: 0.1;
       $variants
     );
   }
-
 }

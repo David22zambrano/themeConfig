@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theming/configTheme.scss",
+              "src/theming/main.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -101,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "54103250-775e-4599-9777-39f4267b28bc"
   }
 }
