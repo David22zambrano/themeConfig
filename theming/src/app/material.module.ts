@@ -20,7 +20,6 @@ import { MatTabsModule                  } from '@angular/material/tabs';
 import { MatSliderModule                } from '@angular/material/slider';
 import { MatSlideToggleModule           } from '@angular/material/slide-toggle';
 
-
 const component = [
   CommonModule,
   MatIconModule,
