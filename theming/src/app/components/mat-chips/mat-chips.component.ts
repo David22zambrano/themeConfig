@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+export interface MatChip{
+  title: String;
+  done: boolean;
+}
 
 @Component({
   selector: 'app-mat-chips',
@@ -6,5 +11,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mat-chips.component.scss']
 })
 export class MatChipsComponent {
+  @Input() public MatChip: MatChip | any;
 
 }

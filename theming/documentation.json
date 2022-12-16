@@ -1,15 +1,146 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "MatChip",
+            "id": "interface-MatChip-6a38fb352577f7b920581d1bb32127b45cae37557fde72b589acf62752c0d6a78dd9439ee8080d5d12ac66b32f6e767c1733d8c1408faf8a2ce385e17a878387",
+            "file": "src/app/components/mat-chips/mat-chips.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface MatChip{\r\n  title: String;\r\n  done: boolean;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n  styleUrls: ['./mat-chips.component.scss']\r\n})\r\nexport class MatChipsComponent {\r\n  @Input() public MatChip: MatChip | any;\r\n\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "done",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "String",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "Transaction",
+            "id": "interface-Transaction-59afa9e1968fd67e35f91559aee340a8546912bd68558284ce497268030a5bd079f910410502e8dbd375cb3674e87a202d9abb7f1d3e8755e5c42e4e9779d6cf",
+            "file": "src/app/app.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component } from '@angular/core';\r\ninterface Transaction {\r\n  item: string;\r\n  cost: number;\r\n}\r\n\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  displayedColumns: string[] = ['item', 'cost'];\r\n  transactions: Transaction[] = [\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ];\r\n\r\n  /** Gets the total cost of all transactions. */\r\n  getTotalCost() {\r\n    return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);\r\n  }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "cost",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "item",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [],
-    "directives": [],
+    "directives": [
+        {
+            "name": "SizeDirective",
+            "id": "directive-SizeDirective-4ff67b520153b83b6f979f8af2a67002ab7fb5c9254d433c79e034e89c2d889690502d1bcf656dcd3491d635ddbf5972065866eaf27423e4862a649310dc9638",
+            "file": "src/app/directivas/size.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\r\n@Directive({\r\n  selector: '[size]',\r\n})\r\nexport class SizeDirective {\r\n  constructor(private el: ElementRef) {\r\n    el.nativeElement.style.customProperty = true;\r\n  }\r\n  @Input() size: any;\r\n  ngOnChanges() {\r\n    let typeElement = this.el.nativeElement.localName;\r\n    function SetStyle(\r\n      element:{style:{height:string;paddingInline:string;fontSize:string;padding:string;width:string;};classList:{add:(arg0:string)=>void;};},\r\n              heightCase:string,fontSizeCase:string,paddingInlineCase:string,classCase:string,paddingCase:string,widthCase:string\r\n    ) {\r\n      if (heightCase) {\r\n        element.style.height = heightCase;\r\n      }\r\n      if (paddingInlineCase) {\r\n        element.style.paddingInline = paddingInlineCase;\r\n      }\r\n      if (fontSizeCase) {\r\n        element.style.fontSize = fontSizeCase;\r\n      }\r\n      if (classCase) {\r\n        element.classList.add(classCase);\r\n      }\r\n      if (paddingCase) {\r\n        element.style.padding = paddingCase;\r\n      }\r\n      if (widthCase) {\r\n        element.style.width = widthCase;\r\n      }\r\n    }\r\n    switch (this.size) {\r\n      case 'small':\r\n        if (typeElement === 'mat-chip' && 'mat-chip-option') {\r\n          SetStyle(this.el.nativeElement, '24px', '13px', '8px', 'undefined','undefined','undefined');\r\n        }if (typeElement === 'mat-chip-option') {\r\n          SetStyle(this.el.nativeElement, '24px', '13px', '8px', 'undefined','undefined','undefined');\r\n        } else if (typeElement === 'button') {\r\n          SetStyle(this.el.nativeElement, '30px', '13px', 'undefined', 'undefined','undefined','undefined');\r\n        } else if (typeElement === 'mat-form-field') {\r\n          SetStyle(this.el.nativeElement, '70px', '16px', 'undefined', 'small','undefined','undefined');\r\n        } else if (\r\n          typeElement === 'mat-checkbox' || typeElement === 'mat-slider' || typeElement === 'mat-radio-button' ||  typeElement === 'mat-spinner' || typeElement === 'table'\r\n        ) {\r\n          SetStyle(this.el.nativeElement, 'undefined','undefined', 'undefined', 'small','undefined','undefined' );\r\n        } else if (typeElement === 'mat-icon') {\r\n          SetStyle(this.el.nativeElement, 'undefined','20px', 'undefined', 'undefined','undefined','undefined' );\r\n        }\r\n        return;\r\n      case 'large':\r\n        if (typeElement === 'button') {\r\n          SetStyle(this.el.nativeElement, 'undefined', '15px', 'undefined', 'undefined', \"20px 19px\",'undefined');\r\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-radio-button') {\r\n          SetStyle(this.el.nativeElement, 'undefined', 'undefined', 'undefined', \"large\",'undefined','undefined');\r\n        } else if (typeElement === 'mat-icon') {\r\n          SetStyle(this.el.nativeElement, '30px', '35px', 'undefined', 'undefined', 'undefined',\"33px\");\r\n        }\r\n        return;\r\n      default:\r\n        return;\r\n    }\r\n  }\r\n\r\n}\r\n",
+            "selector": "[size]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnChanges",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 5,
+                "jsdoctags": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-e24f74b03bda37f4dd4873bb71398880fe57017672cfca1a191c07ce9e555974da89c539de52884756870745352b44dfb557b0ff537cc8b546c5ef3756e0de92",
+            "id": "component-AppComponent-59afa9e1968fd67e35f91559aee340a8546912bd68558284ce497268030a5bd079f910410502e8dbd375cb3674e87a202d9abb7f1d3e8755e5c42e4e9779d6cf",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -27,8 +158,42 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "displayedColumns",
+                    "defaultValue": "['item', 'cost']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "transactions",
+                    "defaultValue": "[\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Transaction[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getTotalCost",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nGets the total cost of all transactions.",
+                    "description": "<p>Gets the total cost of all transactions.</p>\n"
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -36,11 +201,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\ninterface Transaction {\r\n  item: string;\r\n  cost: number;\r\n}\r\n\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  displayedColumns: string[] = ['item', 'cost'];\r\n  transactions: Transaction[] = [\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ];\r\n\r\n  /** Gets the total cost of all transactions. */\r\n  getTotalCost() {\r\n    return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".small {\r\n  &::ng-deep {\r\n    //Form-field\r\n    .mdc-floating-label {\r\n      padding-bottom: 4px;\r\n    }\r\n    .mat-mdc-form-field-infix {\r\n      min-height: 45px;\r\n    }\r\n    // CheckBox\r\n    .mdc-checkbox__background {\r\n      width: 15px;\r\n      height: 15px;\r\n      margin: 1px 1.5px;\r\n    }\r\n    // Slider\r\n    .mat-mdc-slider-visual-thumb .mat-ripple {\r\n      border-radius: 50px;\r\n      margin: 12px 0px 0px 12px;\r\n      width: 50%;\r\n      height: 50%;\r\n    }\r\n    .mdc-slider__thumb-knob {\r\n      width: 5px;\r\n      height: 5px;\r\n      border-width: 7.5px;\r\n    }\r\n    //radio-button\r\n    .mdc-radio__background {\r\n      width: 15px;\r\n      height: 15px;\r\n    }\r\n    .mdc-radio__inner-circle {\r\n      border-width: 7px;\r\n      margin: 2.5px 1.5px;\r\n    }\r\n    .mdc-radio__outer-circle {\r\n      margin: 2.5px 1.5px;\r\n    }\r\n    .mdc-circular-progress__indeterminate-container {\r\n      width: 70px;\r\n    }\r\n    //Table\r\n    .mat-mdc-table,\r\n    .mdc-data-table__header-row,\r\n    .mat-mdc-table,\r\n    .mdc-data-table__row {\r\n      height: 30px;\r\n      font-size: 12px;\r\n    }\r\n  }\r\n}\r\n  .large {\r\n    &::ng-deep {\r\n      // Checkbox\r\n      .mdc-checkbox__background {\r\n        width: 21px;\r\n        height: 21px;\r\n        margin: -1px -1px;\r\n      }\r\n      .mdc-radio__background {\r\n        width: 23px;\r\n        height: 23px;\r\n      }\r\n      .mdc-radio__inner-circle {\r\n        border-width: 11px;\r\n        margin: -2px -1.5px;\r\n      }\r\n      .mdc-radio__outer-circle {\r\n        margin: -2px -1.5px;\r\n      }\r\n    }\r\n  }\r\n\r\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
@@ -49,7 +214,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-82dea6bef9ecfb2c47df267dabe701b98b919153bf8802ad5cffb557c8125f507362b4753e18357a5952719a3725e45cfe66c9fdfc0f0610ab185a0d0024da4b",
+            "id": "component-ButtonComponent-8895097835ae12c7615b9298de037eb1ff2e2ae4f90b30746cc4ad65f996e8f9047619f9af845cdb7bbaa3307d990da345e8e2640535fb463f66460bf2fd522d",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -61,7 +226,7 @@
                 "./button.css"
             ],
             "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   ngClass=\"classes\"\n   ngStyle=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -82,15 +247,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 751,
-                            "end": 765,
+                            "pos": 747,
+                            "end": 761,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 752,
-                                "end": 760,
+                                "pos": 748,
+                                "end": 756,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -150,7 +315,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n  \r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    ngClass=\"classes\"\r\n    ngStyle=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n  \r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -449,7 +614,7 @@
         },
         {
             "name": "MatChipsComponent",
-            "id": "component-MatChipsComponent-63a0c123b18ee804476b131a4f5f784bb7cff0ecd9eff58931c4c7bc9ad6b1af2767e894209f02ca981303d6baf9280e7bf7949fd987e16c7a06a7e69b2d1e2c",
+            "id": "component-MatChipsComponent-6a38fb352577f7b920581d1bb32127b45cae37557fde72b589acf62752c0d6a78dd9439ee8080d5d12ac66b32f6e767c1733d8c1408faf8a2ce385e17a878387",
             "file": "src/app/components/mat-chips/mat-chips.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -465,7 +630,16 @@
                 "./mat-chips.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "MatChip",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "MatChip | any",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -476,7 +650,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n  styleUrls: ['./mat-chips.component.scss']\r\n})\r\nexport class MatChipsComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface MatChip{\r\n  title: String;\r\n  done: boolean;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n  styleUrls: ['./mat-chips.component.scss']\r\n})\r\nexport class MatChipsComponent {\r\n  @Input() public MatChip: MatChip | any;\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -952,13 +1126,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-0955721406e799cf4d7f6524c06fe6d81731f17161b3e949d93e101b051b5cc00dcf93e68c30aedea166d64fe81a937b311f113e8e35a8c27f588a58209dcc42",
+            "id": "module-AppModule-da5c4babb09f3b4db7de742c4d09c1f52f3882f1df58ab224ccbd03c1b3bf0ce588fa235ca42307fc22df850509a328e2ab682f90c36a8fce157b3cab2b30094",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { MaterialModule } from './material.module';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ToolbarComponent } from './components/toolbar/toolbar.component';\r\nimport {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';\r\nimport { CheckboxComponent } from './components/checkbox/checkbox.component';\r\nimport { MatAutocompleteComponent } from './components/mat-autocomplete/mat-autocomplete.component';\r\nimport { MatInputComponent } from './components/mat-input/mat-input.component';\r\nimport { MatButtonsComponent } from './components/mat-buttons/mat-buttons.component';\r\nimport { MatSpinnerComponent } from './components/mat-spinner/mat-spinner.component';\r\nimport { MatBagdeComponent } from './components/mat-bagde/mat-bagde.component';\r\nimport { MatProgressBarComponent } from './components/mat-progress-bar/mat-progress-bar.component';\r\nimport { MatRadioButtonsComponent } from './components/mat-radio-buttons/mat-radio-buttons.component';\r\nimport { MatChipsComponent } from './components/mat-chips/mat-chips.component';\r\nimport { MatDataPickerComponent } from './components/mat-data-picker/mat-data-picker.component';\r\nimport { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';\r\nimport { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';\r\nimport { MatSliderComponent } from './components/mat-slider/mat-slider.component';\r\nimport { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ToolbarComponent,\r\n    CheckboxComponent,\r\n    MatAutocompleteComponent,\r\n    MatInputComponent,\r\n    MatButtonsComponent,\r\n    MatSpinnerComponent,\r\n    MatBagdeComponent,\r\n    MatProgressBarComponent,\r\n    MatRadioButtonsComponent,\r\n    MatChipsComponent,\r\n    MatDataPickerComponent,\r\n    MatStepperComponent,\r\n    MatTabsComponent,\r\n    MatSliderComponent,\r\n    MatSlideToggleComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MaterialModule,\r\n  ],\r\n  providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { MaterialModule } from './material.module';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ToolbarComponent } from './components/toolbar/toolbar.component';\r\nimport {MAT_SNACK_BAR_DATA} from '@angular/material/snack-bar';\r\nimport { CheckboxComponent } from './components/checkbox/checkbox.component';\r\nimport { MatAutocompleteComponent } from './components/mat-autocomplete/mat-autocomplete.component';\r\nimport { MatInputComponent } from './components/mat-input/mat-input.component';\r\nimport { MatButtonsComponent } from './components/mat-buttons/mat-buttons.component';\r\nimport { MatSpinnerComponent } from './components/mat-spinner/mat-spinner.component';\r\nimport { MatBagdeComponent } from './components/mat-bagde/mat-bagde.component';\r\nimport { MatProgressBarComponent } from './components/mat-progress-bar/mat-progress-bar.component';\r\nimport { MatRadioButtonsComponent } from './components/mat-radio-buttons/mat-radio-buttons.component';\r\nimport { MatChipsComponent } from './components/mat-chips/mat-chips.component';\r\nimport { MatDataPickerComponent } from './components/mat-data-picker/mat-data-picker.component';\r\nimport { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';\r\nimport { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';\r\nimport { MatSliderComponent } from './components/mat-slider/mat-slider.component';\r\nimport { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';\r\nimport { SizeDirective } from './directivas/size.directive';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\nimport {MatTableModule} from '@angular/material/table';\r\n\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SizeDirective,\r\n    ToolbarComponent,\r\n    CheckboxComponent,\r\n    MatAutocompleteComponent,\r\n    MatInputComponent,\r\n    MatButtonsComponent,\r\n    MatSpinnerComponent,\r\n    MatBagdeComponent,\r\n    MatProgressBarComponent,\r\n    MatRadioButtonsComponent,\r\n    MatChipsComponent,\r\n    MatDataPickerComponent,\r\n    MatStepperComponent,\r\n    MatTabsComponent,\r\n    MatSliderComponent,\r\n    MatSlideToggleComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MaterialModule,\r\n    MatDividerModule,\r\n    MatTableModule\r\n  ],\r\n  providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1011,6 +1185,9 @@
                         },
                         {
                             "name": "MatTabsComponent"
+                        },
+                        {
+                            "name": "SizeDirective"
                         },
                         {
                             "name": "ToolbarComponent"
@@ -1084,13 +1261,13 @@
         },
         {
             "name": "MaterialModule",
-            "id": "module-MaterialModule-9087fc5144829ccd18c4ea77d7e2d998b3317e50e49db2f99bffd04183a7d0f80c373ddcb34afed68507db99b141f85e4f01151b4d20b04dd314a3959dabcc19",
+            "id": "module-MaterialModule-42fa8db163a7a8fb562a2965e7e64957eea821fd04e59c60cfbe084d6ec9520810cab5099834c905daf99d3502dda6745eec0738b2749bb9e8f6b0d0713c974d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/material.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport { MatIconModule                  } from '@angular/material/icon';\r\nimport { MatToolbarModule               } from '@angular/material/toolbar';\r\nimport { MatButtonModule                } from '@angular/material/button';\r\nimport { MatBadgeModule                 } from '@angular/material/badge';\r\nimport { MatCheckboxModule              } from '@angular/material/checkbox';\r\nimport { MatRadioModule                 } from '@angular/material/radio';\r\nimport { MatChipsModule                 } from '@angular/material/chips';\r\nimport { MatAutocompleteModule          } from '@angular/material/autocomplete';\r\nimport { MatFormFieldModule             } from '@angular/material/form-field';\r\nimport { MatInputModule                 } from '@angular/material/input';\r\nimport { MatProgressSpinnerModule       } from '@angular/material/progress-spinner';\r\nimport { MatProgressBarModule           } from '@angular/material/progress-bar';\r\nimport { MatDatepickerModule            } from '@angular/material/datepicker';\r\nimport { MatStepperModule               } from '@angular/material/stepper';\r\nimport { MatTabsModule                  } from '@angular/material/tabs';\r\nimport { MatSliderModule                } from '@angular/material/slider';\r\nimport { MatSlideToggleModule           } from '@angular/material/slide-toggle';\r\n\r\nconst component = [\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatToolbarModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    component\r\n  ],\r\n  exports: [\r\n    component\r\n  ],\r\n})\r\nexport class MaterialModule { }",
+            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\nimport { MatIconModule                  } from '@angular/material/icon';\r\nimport { MatToolbarModule               } from '@angular/material/toolbar';\r\nimport { MatButtonModule                } from '@angular/material/button';\r\nimport { MatBadgeModule                 } from '@angular/material/badge';\r\nimport { MatCheckboxModule              } from '@angular/material/checkbox';\r\nimport { MatRadioModule                 } from '@angular/material/radio';\r\nimport { MatChipsModule                 } from '@angular/material/chips';\r\nimport { MatAutocompleteModule          } from '@angular/material/autocomplete';\r\nimport { MatFormFieldModule             } from '@angular/material/form-field';\r\nimport { MatInputModule                 } from '@angular/material/input';\r\nimport { MatProgressSpinnerModule       } from '@angular/material/progress-spinner';\r\nimport { MatProgressBarModule           } from '@angular/material/progress-bar';\r\nimport { MatDatepickerModule            } from '@angular/material/datepicker';\r\nimport { MatStepperModule               } from '@angular/material/stepper';\r\nimport { MatTabsModule                  } from '@angular/material/tabs';\r\nimport { MatSliderModule                } from '@angular/material/slider';\r\nimport { MatSlideToggleModule           } from '@angular/material/slide-toggle';\r\n\r\n\r\nconst component = [\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatToolbarModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    component\r\n  ],\r\n  exports: [\r\n    component\r\n  ],\r\n})\r\nexport class MaterialModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1140,6 +1317,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "matChip",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/mat-chips/matChips.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "MatChip | any",
+                "defaultValue": "{\r\n    title: 'mat-chips',\r\n    done: false\r\n\r\n}"
             },
             {
                 "name": "Primary",
@@ -1249,6 +1436,18 @@
                     "type": "Story<Button>",
                     "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
                 }
+            ],
+            "src/app/components/mat-chips/matChips.component.stories.ts": [
+                {
+                    "name": "matChip",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/mat-chips/matChips.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatChip | any",
+                    "defaultValue": "{\r\n    title: 'mat-chips',\r\n    done: false\r\n\r\n}"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -1270,7 +1469,7 @@
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1278,8 +1477,17 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 25,
+                "coverageCount": "1/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Transaction",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1323,6 +1531,25 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "MatChipsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-chips/mat-chips.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "MatChip",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-chips/matChips.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "matChip",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1415,6 +1642,15 @@
                 "name": "ToolbarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/directivas/size.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "SizeDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
