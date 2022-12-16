@@ -27,10 +27,14 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatTableModule} from '@angular/material/table';
 
 
-
-
 @NgModule({
   declarations: [
+
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
     AppComponent,
     SizeDirective,
     ToolbarComponent,
@@ -55,7 +59,7 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MaterialModule,
     MatDividerModule,
-    MatTableModule
+
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]
