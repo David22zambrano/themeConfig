@@ -88,22 +88,22 @@ $ambient-Redesing: (
   24: 0px 11px 15px -7px rgba(16, 24, 64, 0.2),
 );
 
-@mixin elevation($level) 
+@mixin elevation($nivel) 
 {
-  @if ($level < 0 or $level > 24) 
+  @if ($nivel < 0 or $nivel > 24) 
   {
     @error 'solo se permiten niveles entre 0 y 24';
   }
-  box-shadow: #{map.get($umbral-Redesing, $level)},
-    #{map.get($prenumbral-Redesing, $level)},
-    #{map.get($ambient-Redesing, $level)} !important;
+  box-shadow: #{map.get($umbral-Redesing, $nivel)},
+    #{map.get($prenumbral-Redesing, $nivel)},
+    #{map.get($ambient-Redesing, $nivel)} !important;
 }
 
-@for $level from 0 through 24
+@for $nivel from 0 through 24
 {
-  .#{$clase}#{$level}
+  .#{$clase}#{$nivel}
   {
-    @include elevation($level);
+    @include elevation($nivel);
   }
 }
 
