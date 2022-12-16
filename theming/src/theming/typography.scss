@@ -1,3 +1,4 @@
+
 @use "@angular/material" as mat ;
 @use "sass:map";
 
@@ -157,4 +158,5 @@ h6 {
 }
 
 @include mat.all-component-typographies($typography-global-config);
+
 

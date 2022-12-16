@@ -22,15 +22,44 @@ import { MatStepperComponent } from './components/mat-stepper/mat-stepper.compon
 import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
 import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
+import { SizeDirective } from './directivas/size.directive';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
   declarations: [
+
     AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+    AppComponent,
+    SizeDirective,
+    ToolbarComponent,
+    CheckboxComponent,
+    MatAutocompleteComponent,
+    MatInputComponent,
+    MatButtonsComponent,
+    MatSpinnerComponent,
+    MatBagdeComponent,
+    MatProgressBarComponent,
+    MatRadioButtonsComponent,
+    MatChipsComponent,
+    MatDataPickerComponent,
+    MatStepperComponent,
+    MatTabsComponent,
+    MatSliderComponent,
+    MatSlideToggleComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatDividerModule,
+
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]
