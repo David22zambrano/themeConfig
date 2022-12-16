@@ -15,12 +15,14 @@ import { MatSpinnerComponent } from './components/mat-spinner/mat-spinner.compon
 import { MatBagdeComponent } from './components/mat-bagde/mat-bagde.component';
 import { MatProgressBarComponent } from './components/mat-progress-bar/mat-progress-bar.component';
 import { MatRadioButtonsComponent } from './components/mat-radio-buttons/mat-radio-buttons.component';
+import { MatCardComponent } from './components/mat-card/mat-card.component';
 import { MatChipsComponent } from './components/mat-chips/mat-chips.component';
 import { MatDataPickerComponent } from './components/mat-data-picker/mat-data-picker.component';
 import { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';
 import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
 import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
+import { MatTableComponent } from './components/mat-table/mat-table.component';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
     MatAutocompleteComponent,
     MatInputComponent,
     MatButtonsComponent,
+    MatCardComponent,
     MatSpinnerComponent,
     MatBagdeComponent,
     MatProgressBarComponent,
@@ -39,13 +42,16 @@ import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide
     MatStepperComponent,
     MatTabsComponent,
     MatSliderComponent,
-    MatSlideToggleComponent
+    MatSlideToggleComponent,
+    MatTableComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    
   ],
   providers: [{ provide: MAT_SNACK_BAR_DATA, useValue: {} }],
   bootstrap: [AppComponent]
