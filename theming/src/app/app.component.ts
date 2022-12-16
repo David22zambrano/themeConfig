@@ -4,7 +4,6 @@ interface Transaction {
   cost: number;
 }
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
