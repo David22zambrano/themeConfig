@@ -96,7 +96,7 @@ $ambient-Redesing: (
   }
   box-shadow: #{map.get($umbral-Redesing, $nivel)},
     #{map.get($prenumbral-Redesing, $nivel)},
-    #{map.get($ambient-Redesing, $nivel)} !important;
+    #{map.get($ambient-Redesing, $nivel)}!important;
 }
 
 @for $nivel from 0 through 24
@@ -147,8 +147,7 @@ $ambient-Redesing: (
 {
   @include elevation(6);
 }
-.mat-fab,
-.mat-mini-fab 
+.mdc-fab, .mat-mdc-fab, .mat-mdc-mini-fab
 {
   @include elevation(6);
   &:not(.mat-button-disabled):active 
