@@ -32,7 +32,6 @@ import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
-    SizeDirective,
     ToolbarComponent,
     CheckboxComponent,
     MatAutocompleteComponent,
