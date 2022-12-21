@@ -34,7 +34,7 @@ export class SizeDirective {
     }
     switch (this.size) {
       case 'small':
-        if (typeElement === 'mat-chip' && 'mat-chip-option') {
+        if (typeElement === 'mat-chip') {
           SetStyle(this.el.nativeElement, '24px', '13px', '8px', 'undefined','undefined','undefined');
         }if (typeElement === 'mat-chip-option') {
           SetStyle(this.el.nativeElement, '24px', '13px', '8px', 'undefined','undefined','undefined');

@@ -31,7 +31,7 @@
             ],
             "styles": [
               "src/theming/main.scss",
-              "src/styles.scss"
+              "src/app/app.component.scss"
             ],
             "scripts": []
           },
