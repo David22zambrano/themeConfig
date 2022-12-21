@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 @use 'sass:map';
 @use 'sass:math';
 @use 'sass:meta';
@@ -5,7 +6,7 @@
 $clase: "mat-elevation-z";
 
 $umbral-Redesing: (
-  0: 0px 0px 0px 0px rgba(0, 0, 0, 0),
+  0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0),
   1: 0px 2px 1px -1px rgba(16, 24, 64, 0.2),
   2: 0px 3px 1px -2px rgba(16, 24, 64, 0.2),
   3: 0px 3px 3px -2px rgba(16, 24, 64, 0.2),
@@ -33,7 +34,7 @@ $umbral-Redesing: (
 );
 
 $prenumbral-Redesing: (
-  0: 0px 0px 0px 0px rgba(0, 0, 0, 0),
+  0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0),
   1: 0px 1px 1px 0px rgba(16, 24, 64, 0.14),
   2: 0px 2px 2px 0px rgba(16, 24, 64, 0.14),
   3: 0px 3px 4px 0px rgba(16, 24, 64, 0.14),
@@ -61,7 +62,7 @@ $prenumbral-Redesing: (
 );
 
 $ambient-Redesing: (
-  0: 0px 0px 0px 0px rgba(0, 0, 0, 0),
+  0: 0px 0px 0px 0px rgba(0, 0, 0, 0.0),
   1: 0px 1px 3px 0px rgba(16, 24, 64, 0.12),
   2: 0px 1px 5px 0px rgba(16, 24, 64, 0.12),
   3: 0px 1px 8px 0px rgba(16, 24, 64, 0.12),
@@ -107,66 +108,85 @@ $ambient-Redesing: (
   }
 }
 
-.mat-mdc-card,
-.mat-slide-toggle-thumb 
+//auto-complete
+.mat-autocomp1lete-panel{
+  @include elevation(1);
+}
+// card
+.mat-mdc-card{
+  @include elevation(1);
+}
+// slide-togle
+.mat-slide-toggle
 {
   @include elevation(1);
 }
-.mat-expansion-panel,
-.mat-button-toggle-standalone,
-.mat-button-toggle-group 
-{
-  @include elevation(2);
-}
-.mat-raised-button 
+// button-raised
+.mat-mdc-raised-button
 {
   @include elevation(2);
   &:not(.mat-button-disabled):active 
   {
     @include elevation(8);
   }
+  &:disabled {
+    @include elevation(0);
+  }
 }
-.mat-chip.mat-standard-chip 
+// fab mini-fab button 
+.mat-mdc-fab, .mat-mdc-mini-fab {
+    @include elevation(6);
+  &:not(.mat-button-disabled):active {
+    @include elevation(12);
+  }
+}
+// button-togle 
+.mat-button-toggle-group:not([class*= mat-button-toggle-group-appearance-standard ]){
+  @include elevation(2);
+}
+// chips
+.mat-chip.mat-standard-chip ,.mat-mdc-standard-chip
 {
   &:not(.mat-chip-disabled) 
   {
     &:active 
     {
-      @include elevation(3);
+      @include elevation(1);
     }
   }
 }
-.mat-datepicker-content,
-.mat-menu-panel,
-.mat-autocomplete-panel,
-.mat-select-panel 
-{
-  @include elevation(4);
+// date picker 
+.mat-datepicker-content{
+  @include elevation(8);
 }
-.mat-snack-bar-container 
+// dialog
+.mat-mdc-dialog-container .mdc-dialog__surface
 {
+  @include elevation(24);
+}
+// expansion panel
+.mat-expansion-panel{
+  @include elevation(1);
+}
+//menu
+.mat-menu-panel, .mat-select-panel, .mdc-menu-surface{
+  @include elevation(8);
+}
+//snack-bar
+.mat-mdc-snack-bar-container .mdc-snackbar__surface{
   @include elevation(6);
 }
-.mdc-fab, .mat-mdc-fab, .mat-mdc-mini-fab
-{
-  @include elevation(6);
-  &:not(.mat-button-disabled):active 
-  {
-    @include elevation(12);
-  }
-}
-.mat-bottom-sheet-container 
+//bottom-sheet
+.mat-bottom-sheet-container
 {
   @include elevation(16);
 }
+//drawer
 .mat-drawer 
 {
-  &:not(.mat-drawer-side) 
+  &.mat-drawer-side
   {
     @include elevation(16);
   }
 }
-.mat-dialog-container,.mat-datepicker-content-touch 
-{
-  @include elevation(24);
-}
+

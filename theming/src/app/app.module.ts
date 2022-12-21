@@ -23,6 +23,11 @@ import { MatTabsComponent } from './components/mat-tabs/mat-tabs.component';
 import { MatSliderComponent } from './components/mat-slider/mat-slider.component';
 import { MatSlideToggleComponent } from './components/mat-slide-toggle/mat-slide-toggle.component';
 import { MatTableComponent } from './components/mat-table/mat-table.component';
+import { MatExpancionPanelComponent } from './components/mat-expancion-panel/mat-expancion-panel.component';
+import { MatMenuComponent } from './components/mat-menu/mat-menu.component';
+import { MatSelectComponent } from './components/mat-select/mat-select.component';
+import { MatSidenavComponent } from './components/mat-sidenav/mat-sidenav.component';
+import { MatSnackBarComponent } from './components/mat-snack-bar/mat-snack-bar.component';
 
 
 @NgModule({
@@ -43,8 +48,12 @@ import { MatTableComponent } from './components/mat-table/mat-table.component';
     MatTabsComponent,
     MatSliderComponent,
     MatSlideToggleComponent,
-    MatTableComponent
-
+    MatTableComponent,
+    MatExpancionPanelComponent,
+    MatMenuComponent,
+    MatSelectComponent,
+    MatSidenavComponent,
+    MatSnackBarComponent
   ],
   imports: [
     BrowserModule,
